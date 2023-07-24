@@ -1,0 +1,7 @@
+.car_list_tag{
+    display: inline-block;
+}
+
+#brand_list{
+    list-style-type:none;
+}
