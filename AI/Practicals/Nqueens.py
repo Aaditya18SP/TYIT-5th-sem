@@ -17,7 +17,7 @@ def place(k,i):
         return False
     j=1
     while(j<k):
-        if(abs(x[j])-i==abs(j-k)):
+        if abs(x[j]-i)==abs(j-k):
            return False
         j+=1
     return True
@@ -25,9 +25,12 @@ def place(k,i):
 def Nqueens(k):
     for i in range(1,n+1):
         clear_future_blocks(k)
-        if(place(k,i)):
+        if place(k,i):
             x[k]=i
-            if(k==n):
+            #print(i)
+            #print(n)
+            if k == n:
+               
                 for j in x:
                     print(x[j],end='')
                     '''for k in range(1,n+1):
@@ -36,8 +39,11 @@ def Nqueens(k):
                         else:
                             print('.',end='')
                             print()'''
-        else:
-            Nqueens(k+1)
+                print()
+                print('_________')
+           
+            else:
+                Nqueens(k+1)
 
 Nqueens(1)
         
