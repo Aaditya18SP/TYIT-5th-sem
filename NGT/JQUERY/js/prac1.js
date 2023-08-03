@@ -187,6 +187,7 @@ $("#input_add_new_brand").on("input",()=>{
         
     },"slow","linear",()=>{
         $("#list_of_cars p").css("transform","scale(2)");
+        
     });
 
 
