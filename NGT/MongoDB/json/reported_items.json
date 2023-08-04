@@ -1,0 +1,114 @@
+[
+  {
+    "r_id": 1000000001,
+    "name": "Bottle",
+    "image": ["image3.png", "image2.png"],
+    "description": "Blue bottle",
+    "location": "501",
+    "date_of_loss": "2023-08-14",
+    "time_of_loss": "12:00:00",
+    "category": "stationary",
+    "reported_as": "lost"
+  },
+  {
+    "r_id": 1000000002,
+    "name": "Earphone",
+    "image": ["image4.png", "image5.png"],
+    "description": "Redmi eatphones",
+    "location": "SFC library",
+    "date_of_loss": "2023-08-12",
+    "time_of_loss": "12:00:00",
+    "category": "electronics",
+    "reported_as": "lost"
+  },
+  {
+    "r_id": 1000000003,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000004,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000005,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000006,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000007,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000008,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000009,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000010,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000011,
+    "name": "Pouch",
+    "image": ["image6.png", "image7.png"],
+    "description": "red pouch",
+    "location": "Library",
+    "date_of_loss": "2023-04-14",
+    "time_of_loss": "11:00:00",
+    "category": "stationary"
+  }
+]
