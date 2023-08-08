@@ -99,13 +99,14 @@
      <br />
       <br />
        <br />
-         <!--TextBox To display the selected engien type-->
+         <!--TextBox To display the selected engine type-->
     <asp:TextBox ID="tbOptionalExtras" BackColor="#cbecf7" runat="server" Visible="false" TextMode="MultiLine" Wrap="true"></asp:TextBox>
     
     <br />
     <br />
     <br />
 
+   
     <!--Agree to the terms and conditions-->
     <asp:Label ID="lbReadNotReadTC" Visible="true" runat="server" ForeColor="Black" Text="Read the TC?"></asp:Label>
     <br />
@@ -113,28 +114,25 @@
         <!--Read the terms of conditons-->
         <asp:RadioButton ID="rbReadTC" AutoPostBack="true" 
         Text="I have read the terms of conditions" runat="server" 
-        oncheckedchanged="rbReadTC_CheckedChanged" />
+        oncheckedchanged="rbReadTC_CheckedChanged"   GroupName="TC"/>
 
         <br />
         
 
-        <asp:RadioButton ID="rbNotReadTC" AutoPostBack="true" Text="I have not read the terms of conditions" runat="server" />
+        <asp:RadioButton ID="rbNotReadTC" AutoPostBack="true" 
+        Text="I have not read the terms of conditions" runat="server" 
+        oncheckedchanged="rbNotReadTC_CheckedChanged" Checked="true" GroupName="TC" />
         <br />
         <br />
 
         
-        <!--Agree to terms of codntions-->
+        <!--Agree to terms of conditions-->
          <asp:Label ID="lbAgreeNotAgreeTC" Visible="true" runat="server" ForeColor="Black" Text="Agree to the TC?"></asp:Label>
          <br />
   
 
-        <asp:CheckBox ID="cbAgreeTC" AutoPostBack="true" Text="I agree to the TC" runat="server" />
-
-         <br />
-        
-
-         <asp:CheckBox ID="cbNotAgreeTC" AutoPostBack="true" Text="I do not agree to the TC" runat="server" />
-
+        <asp:CheckBox ID="cbAgreeTC" AutoPostBack="true" Text="I agree to the TC" 
+        runat="server" oncheckedchanged="cbAgreeTC_CheckedChanged" />
 
           <br />
     <br />
@@ -150,4 +148,50 @@
         runat="server" onclick="btnSubmit_Reset" />
 
 
+        <hr />
+        <br />
+         <br />
+          <br />
+
+
+
+         <!--ListBox to choose the see the contributors of the website-->
+
+         <asp:Label ID="LbContributors" Visible="true" runat="server" ForeColor="Black" Text="Contributed to this website"></asp:Label>
+         <br />
+
+
+         <asp:ListBox ID="lboxContributors" runat="server" Width="123px" 
+        AutoPostBack="true" 
+        onselectedindexchanged="lboxContributors_SelectedIndexChanged"  >
+         <asp:ListItem> ABC</asp:ListItem>
+          <asp:ListItem> XYZ</asp:ListItem>
+ <asp:ListItem> DEF</asp:ListItem>
+ <asp:ListItem> FGH</asp:ListItem>
+ <asp:ListItem> IJK</asp:ListItem>
+           <asp:ListItem> LMN</asp:ListItem>
+         </asp:ListBox>
+
+         <br />
+         <br />
+         <asp:TextBox ID="tbAddNewContributor" runat="server" BackColor="White"></asp:TextBox>
+
+         <asp:Button ID="btnAddContributor" runat="server" Text="Add" 
+        onclick="btnAddContributor_Click"/>
+         <asp:Button ID="btnRemoveContributor" runat="server" Text="RemoveItem" 
+        onclick="btnRemoveContributor_Click"/>
+         <asp:Button ID="btnClearList" runat="server" Text="Clear" 
+        onclick="btnClearList_Click"/>
+          <asp:Button ID="btnCount" runat="server" Text="Count" 
+        onclick="btnCount_Click"/>
+
+         <br />
+         <asp:Label ID="lbCount" runat="server"></asp:Label>
+         <br />
+         
+         <br />
+         <br />
+         <asp:Label ID="lbSelectedItems" runat="server" Text="Selected items" ForeColor="Black"></asp:Label>
+         <br />
+       <asp:TextBox ID="tbSelectedItem" runat="server"></asp:TextBox>
 </asp:Content>
