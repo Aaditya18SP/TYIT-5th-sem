@@ -106,6 +106,37 @@
     <br />
     <br />
 
+    
+       <!--Drop Down List of car brands-->
+
+       <asp:Label ID="lbDropDownList" runat="server" Text="Car Brands" ForeColor="Black"></asp:Label>
+       <br /> 
+       <asp:DropDownList ID="ddlCarBrands" runat="server" 
+         OnSelectedIndexChanged="ddlCarBrands_SelectedIndexChanged" AutoPostBack="true">
+     
+ <asp:ListItem >Pagani</asp:ListItem>
+        <asp:ListItem >Koenigsegg</asp:ListItem>
+         <asp:ListItem >Porsche</asp:ListItem>
+          <asp:ListItem >Ferrari</asp:ListItem>
+           <asp:ListItem >Mclaren</asp:ListItem>
+       </asp:DropDownList>
+
+       <br />
+ <br />
+        <br />
+       <!--Bulleted list of that car brand-->
+
+        <asp:Label ID="lbBulletedList" runat="server" Text="Car brands" ForeColor="Black"></asp:Label>  
+
+        <br />
+       <asp:BulletedList ID="blCarModels" BulletStyle="Numbered" runat="server" ForeColor="Black" DisplayMode="HyperLink">
+        
+       </asp:BulletedList>
+
+        <br />
+ <br />
+        <br />
+
    
     <!--Agree to the terms and conditions-->
     <asp:Label ID="lbReadNotReadTC" Visible="true" runat="server" ForeColor="Black" Text="Read the TC?"></asp:Label>
@@ -163,7 +194,7 @@
 
          <asp:ListBox ID="lboxContributors" runat="server" Width="123px" 
         AutoPostBack="true" 
-        onselectedindexchanged="lboxContributors_SelectedIndexChanged"  >
+         SelectionMode="Multiple" onselectedindexchanged="lboxContributors_SelectedIndexChanged"  >
          <asp:ListItem> ABC</asp:ListItem>
           <asp:ListItem> XYZ</asp:ListItem>
  <asp:ListItem> DEF</asp:ListItem>
@@ -194,4 +225,9 @@
          <asp:Label ID="lbSelectedItems" runat="server" Text="Selected items" ForeColor="Black"></asp:Label>
          <br />
        <asp:TextBox ID="tbSelectedItem" runat="server"></asp:TextBox>
+
+        <br />
+ <br />
+        <br />
+
 </asp:Content>

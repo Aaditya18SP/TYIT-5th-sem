@@ -17,7 +17,8 @@ public partial class _Default : System.Web.UI.Page
     //1. When the page loads 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //trigger the drop down list event when the page loads to display the items in the bulleted list initially when user has not yet selected an item from the dropdown
+        ddlCarBrands_SelectedIndexChanged(sender, e);
     }
 
     //2. when the submit button is clicked
@@ -141,26 +142,74 @@ public partial class _Default : System.Web.UI.Page
     //9. Remove the selected contributor
     protected void btnRemoveContributor_Click(object sender, EventArgs e)
     {
-
+        lboxContributors.Items.Remove(lboxContributors.SelectedItem);
     }
 
 
     //10. Clear the entire list
     protected void btnClearList_Click(object sender, EventArgs e)
     {
-
+        lboxContributors.Items.Clear();
     }
 
     //11. Count total number of items in list
     protected void btnCount_Click(object sender, EventArgs e)
     {
-
+        lbCount.Text = lboxContributors.Items.Count.ToString();
     }
 
 
     //12. Select multiple items
     protected void lboxContributors_SelectedIndexChanged(object sender, EventArgs e)
     {
+
+        //NOTE: list items that are selected are only selected and displayed, duplicate values are not displayed
+        tbSelectedItem.Text = "";
+        foreach (ListItem item in lboxContributors.Items)
+        {
+            if (item.Selected)
+            {
+                tbSelectedItem.Text += item.Text;
+            }
+        }
+        
+    }
+
+
+    //13.DropDownList Listener
+    protected void ddlCarBrands_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        String[] pagani_cars = { "ZondaF", "Huarya BC" };
+        String[] porsche_cars = { "GT3 RS", "GT3", "GT2", "GT2RS" };
+        String[] koenigsegg_cars = { "CCXR", "Jesko" };
+        String[] ferrari_cars = { "458 italia", "812 GTS", "F12 TDF" };
+        String[] mclaren_cars = { "720s", "Senna", "765LT" };
+
+        String selected_brand = ddlCarBrands.SelectedItem.Value.ToLower().Trim();
+        //lbBulletedList.Text = selected_brand;
+        blCarModels.Items.Clear();
+
+        switch (selected_brand)
+        {
+            case "ferrari":
+                loopThroughCarModels(ferrari_cars);
+                break;
+            case "mclaren":
+                loopThroughCarModels(mclaren_cars);
+                break;
+            case "pagani":
+                loopThroughCarModels(pagani_cars);
+                break;
+            case "koenigsegg":
+                loopThroughCarModels(koenigsegg_cars);
+                break;
+            case "porsche":
+                loopThroughCarModels(porsche_cars);
+                break;
+            default:
+                blCarModels.Items.Add("No items");
+                break;
+        }
 
     }
 
@@ -211,6 +260,15 @@ public partial class _Default : System.Web.UI.Page
     }
 
 
+    //3. Loop through the items of the array of car models of each brand
+    protected void loopThroughCarModels(String[] car_brand)
+    {
+        foreach (String car_models in car_brand)
+        {
+            blCarModels.Items.Add(car_models);
+        }
+    }
 
-   
+
+
 }
