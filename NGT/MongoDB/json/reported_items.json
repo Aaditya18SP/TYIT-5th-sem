@@ -110,5 +110,85 @@
     "date_of_loss": "2023-04-14",
     "time_of_loss": "11:00:00",
     "category": "stationary"
+  },
+  {
+    "r_id": 1000000012,
+    "name": "Pen",
+    "image": ["image8.png", "image9.png"],
+    "description": "blue ballpoint pen",
+    "location": "Cafeteria",
+    "date_of_loss": "2023-04-15",
+    "time_of_loss": "12:30:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000013,
+    "name": "Laptop",
+    "image": ["image10.png", "image11.png"],
+    "description": "silver MacBook Air",
+    "location": "Classroom",
+    "date_of_loss": "2023-04-16",
+    "time_of_loss": "13:00:00",
+    "category": "electronics"
+  },
+  {
+    "r_id": 1000000014,
+    "name": "Jacket",
+    "image": ["image12.png", "image13.png"],
+    "description": "black leather jacket",
+    "location": "Gym",
+    "date_of_loss": "2023-04-17",
+    "time_of_loss": "14:00:00",
+    "category": "clothing"
+  },
+  {
+    "r_id": 1000000015,
+    "name": "Backpack",
+    "image": ["image14.png", "image15.png"],
+    "description": "green canvas backpack",
+    "location": "Parking lot",
+    "date_of_loss": "2023-04-18",
+    "time_of_loss": "15:00:00",
+    "category": "bags"
+  },
+  {
+    "r_id": 1000000017,
+    "name": "Watch",
+    "image": ["image16.png", "image17.png"],
+    "description": "gold wristwatch",
+    "location": "Auditorium",
+    "date_of_loss": "2023-04-19",
+    "time_of_loss": "16:00:00",
+    "category": "jewellery"
+  },
+  {
+    "r_id": 1000000018,
+    "name": "Notebook",
+    "image": ["image18.png", "image19.png"],
+    "description": "spiral-bound notebook with flower cover",
+    "location": "Library",
+    "date_of_loss": "2023-04-20",
+    "time_of_loss": "17:00:00",
+    "category": "stationary"
+  },
+  {
+    "r_id": 1000000019,
+    "name": "Headphones",
+    "image": ["image20.png", "image21.png"],
+    "description": "white wireless headphones",
+    "location": "Cafeteria",
+    "date_of_loss": "2023-04-21",
+    "time_of_loss": "18:00:00",
+    "category": "electronics"
+  },
+  {
+    "r_id": 1000000020,
+    "name": "Sweater",
+    "image": ["image22.png", "image23.png"],
+    "description": "Blue hoodie",
+    "location": "class 501",
+    "date_of_loss": "2023-03-28",
+    "time_of_loss": "18:00:00",
+    "category": "clothing"
   }
 ]
