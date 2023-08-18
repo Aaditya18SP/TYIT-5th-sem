@@ -1,27 +1,37 @@
 #main_navbar{
     background-color: black;
     position:sticky;
-    display:flex;
+
     width:100%;
-    height:auto;
+    height:15%;
 
 }
 
 .navbar_links{
     text-decoration: none;
-    font-size: large;
+font-size:14px;
     font-weight: bold;
     color:white;
     margin-top: 20px;
    
 }
 
+.navbar_links:hover{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color:white;
+    transition: font-size ease 0.6s;
+}
+
 
 #navbar_list{
     list-style-type:none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: end;
+}
+
+h4{
+    color:white;
 }
 
 ul li{

@@ -32,24 +32,25 @@
     <title>Mongodb</title>
   </head>
   <body>
-    <nav id="main_navbar" class="ms-auto">
-      <ul id="navbar_list">
-        <li id="home">
-          <a href="../main/page1.html" class="navbar_links">Home</a>
-        </li>
-        <li id="home">
-          <a href="../main/page1.html" class="navbar_links">Home</a>
-        </li>
-        <li id="home">
-          <a href="../main/page1.html" class="navbar_links">Home</a>
-        </li>
-        <li id="home">
-          <a href="../main/page1.html" class="navbar_links">Home</a>
-        </li>
-        <li id="home">
-          <a href="../main/page1.html" class="navbar_links">Home</a>
-        </li>
-      </ul>
+    <nav id="main_navbar">
+      <div class="row ps-4">
+        <h4 class="col-md-6 mt-3" style="padding-left: 30px">JSON DATA</h4>
+        <ul id="navbar_list" class="col-md-6 mt-3">
+          <li id="home">
+            <a href="../main/page1.html" class="navbar_links">Home</a>
+          </li>
+          <li id="json1">
+            <a href="../main/page1.html" class="navbar_links">Page 1</a>
+          </li>
+          <li id="json2">
+            <a href="../main/page1.html" class="navbar_links">Page 2</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+
+    <div class="container" id="displayDiv"></div>
+
+    <script src="../js/page1.js"></script>
   </body>
 </html>
