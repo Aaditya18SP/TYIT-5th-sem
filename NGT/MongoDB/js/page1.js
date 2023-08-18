@@ -14,12 +14,13 @@ console.log(stringifiedData);
 
 const parsedData=JSON.parse(stringifiedData);
 console.log(parsedData);
+
 const arr=Array.from(parsedData);
 console.log(arr);
 var divDisplay = document.getElementById("displayDiv");
 
 for(i=0;i<arr.length;i++){
-    divDisplay.innerText+=" \n" +arr[i].name;
+    divDisplay.innerText+= " \n"+i+"." +arr[i].name + " \n \t description: " + arr[i].description;
 }
 }
 
