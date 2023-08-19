@@ -43,6 +43,7 @@ public void receiveInfo(){
 int age;
 String fn,ln,rn;
 
+Console.Write("\nNEW STUDENT\n");
 Console.Write("Enter firstname:");
 fn=Console.ReadLine();
 Console.Write("Enter lastname:");
@@ -50,7 +51,7 @@ ln=Console.ReadLine();
 Console.Write("Enter roll no:");
 rn=Console.ReadLine();
 Console.Write("Enter age:");
-age=Console.ReadLine();
+age=Convert.ToInt32(Console.ReadLine());
 
 students_arraylist.Add(new Student(fn,ln,rn,age));
 
@@ -58,10 +59,10 @@ students_arraylist.Add(new Student(fn,ln,rn,age));
 
 
 public void displayInfo(){
-
-foreach( Student student in students_arraylist){
 int i=1;
-Console.WriteLine("Student {0}",i);
+foreach( Student student in students_arraylist){
+
+Console.WriteLine("\nStudent {0}\n",i);
 i++;
 
 Console.WriteLine("Firstname:{0}" ,student.firstname);
@@ -78,18 +79,16 @@ public static void Main(string[] args){
 prac1c obj =new prac1c();
 int total_students;
 Console.Write("Enter total number of students:");
-total_students=Console.Read();
+total_students=Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Reading info");
+Console.WriteLine("\nReading info\n");
 for(int i=0;i<total_students;i++){
 obj.receiveInfo();
-
 }
 
-Console.WriteLine("Displaying info");
-for(int i=0;i<total_students;i++){
+Console.WriteLine("\nDisplaying info\n");
+
 obj.displayInfo();
-}
 
 }
 }
