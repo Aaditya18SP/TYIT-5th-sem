@@ -1,0 +1,65 @@
+
+QUERIES
+AND Operator ($and):
+Find reported items that were lost after "2023-08-31" and belong to the "Electronics" category.
+Retrieve messages sent by user 12345678901 to admin 12345678902 and sent by admin 12345678902 to user 12345678901.
+Get reported items that were lost in the library and have a progress status of "l".
+Find items that were reported by user 12345678903 and have not been verified yet.
+Retrieve reported items with a location of "Street" and a category either "Sports Equipment" or "Jewelry".
+OR operator
+Find reported items that were lost after "2023-08-31" or have been reported as "stolen".
+Retrieve messages sent by user 12345678901 to admin 12345678902 or admin 12345678902 to user 12345678901.
+Get reported items that were lost in the library or reported by user 12345678903.
+Find items that have a progress status of "l" or "p".
+Retrieve reported items with a location of "Street" or a category of "Sports Equipment".
+
+
+NOT OPERATOR 
+Find reported items that were lost before "2023-08-31" and are not categorized as "Books".
+Retrieve messages sent by user 12345678901 to admin 12345678902 but not sent by admin 12345678902 to user 12345678901.
+Get reported items that were lost in the library but not in progress.
+Find items that were reported by user 12345678903 but are not verified.
+Retrieve reported items with a location not equal to "Street".
+NOR OPERATOR
+Find reported items that were lost before "2023-08-31" nor categorized as "Books".
+Retrieve messages not sent by user 12345678901 to admin 12345678902 nor by admin 12345678902 to user 12345678901.
+Get reported items that were neither lost in the library nor in progress.
+Find items that were not reported by user 12345678903 nor verified.
+Retrieve reported items with a location neither "Street" nor "Library".
+$set and $unset (UPDATE):
+Update the progress of a reported item with r_id 60000000001 to "completed."
+Set the user_date_reported field to the current date for the reported item with r_id 60000000002.
+Update the user_email of the user with control_faculty_id 12345678901 to "newemail@example.com."
+Update the m_content of a message with m_id 80000000001 to "Updated message content."
+Set the admin_id to null for the reported item with r_id 60000000003.
+
+
+
+
+Remove the user_phone field from the user with control_faculty_id 12345678902.
+Unset the from_admin_id field from a message with m_id 80000000002.
+Remove the user_account_status field from the user with control_faculty_id 12345678903.
+Unset the admin_id field from a reported item with r_id 60000000004.
+Remove the r_location field from the reported item with r_id 60000000005.
+$lt,$lte,$gt,$gte,$ne,$nin,$eq,$exists(UPDATE):
+Find reported items with a date of loss greater than or equal to "2023-09-01".
+Find users with an age less than 30.
+Find messages that were not sent by admin.
+Find reported items with a progress status other than "completed".
+Find reported items with category IDs not in the specified list.
+Find users with an account status of "active" or "pending".
+Find messages with no "to_user_id" field.
+Find reported items with a progress status of "in_progress" and a category ID of 50000000003.
+Find users with an age greater than or equal to 18 and less than 60.
+Find reported items with a date of loss between "2023-08-15" and "2023-09-15".
+Count the total number of reported items with a progress status of "in_progress".
+count(), limit(),sort(),skip(),findOne()
+Find and count the number of reported items with a location in alphabetical order (ascending).
+Find and count the number of reported items with a progress status of "completed" and limit the result to 5 items.
+Find and count the number of reported items with a category ID of 50000000002, sorted by date of loss (descending), and skip the first 2 items.
+Find and count the number of reported items with a progress status of "pending" and a category ID of 50000000001, sorted by date of loss (ascending), and limit the result to 3 items.
+Find and count the number of reported items with a reported ID greater than 60000000005, sorted by date of loss (ascending), and limit the result to 4 items.
+Find the first reported item with a progress status of "in_progress" and sort the result by date of loss (descending).
+Find the reported item with the lowest reported ID and display its name and description.
+Find the reported item with a location of "Library" and display its name, location, and date of loss.
+Find the reported item with a category ID of 50000000003 and display its name, location, and date of loss.
