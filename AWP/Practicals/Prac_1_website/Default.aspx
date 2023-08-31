@@ -30,7 +30,7 @@
     <br />
     <asp:TextBox ID="tbName" BackColor="#cbecf7" runat="server" TabIndex="1" AccessKey="A"
         AutoCompleteType="FirstName" ToolTip="Please enter your full name" BorderStyle="None"
-        Width="25%" Height="30px" ></asp:TextBox>
+        Width="25%" Height="30px" ontextchanged="tbName_TextChanged" ></asp:TextBox>
     <br />
     <br />
     <br />
@@ -129,7 +129,9 @@
         <asp:Label ID="lbBulletedList" runat="server" Text="Car brands" ForeColor="Black"></asp:Label>  
 
         <br />
-       <asp:BulletedList ID="blCarModels" BulletStyle="Numbered" runat="server" ForeColor="Black" DisplayMode="HyperLink">
+       <asp:BulletedList ID="blCarModels" BulletStyle="Numbered" runat="server" 
+        ForeColor="Black" DisplayMode="HyperLink" Target="_blank" 
+        >
         
        </asp:BulletedList>
 

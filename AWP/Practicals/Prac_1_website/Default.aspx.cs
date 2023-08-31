@@ -267,8 +267,19 @@ public partial class _Default : System.Web.UI.Page
         {
             blCarModels.Items.Add(car_models);
         }
+
+        //to redirect them to ZondaF.aspx page
+        foreach (ListItem items in blCarModels.Items)
+        {
+            items.Value = "ZondaF.aspx";
+        }
     }
 
 
 
+    protected void tbName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+    
 }
