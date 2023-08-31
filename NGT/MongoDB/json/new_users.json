@@ -1,0 +1,92 @@
+[
+  {
+    "control_faculty_id": 12345678901,
+    "user_email": "user2@example.com",
+    "user_phone": "555-123-4567",
+    "user_fullname": "Jane Smith",
+    "user_password": "hashed_password",
+    "user_type": "f",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678902,
+    "user_email": "user3@example.com",
+    "user_phone": "555-987-6543",
+    "user_fullname": "Alice Johnson",
+    "user_password": "hashed_password",
+    "user_type": "s",
+    "user_account_status": "s"
+  },
+  {
+    "control_faculty_id": 12345678903,
+    "user_email": "user4@example.com",
+    "user_phone": "555-555-5555",
+    "user_fullname": "Bob Anderson",
+    "user_password": "hashed_password",
+    "user_type": "f",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678904,
+    "user_email": "user5@example.com",
+    "user_phone": "555-111-2222",
+    "user_fullname": "Eve Lee",
+    "user_password": "hashed_password",
+    "user_type": "s",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678905,
+    "user_email": "user6@example.com",
+    "user_phone": "555-222-3333",
+    "user_fullname": "Alex Brown",
+    "user_password": "hashed_password",
+    "user_type": "f",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678906,
+    "user_email": "user7@example.com",
+    "user_phone": "555-333-4444",
+    "user_fullname": "Grace Taylor",
+    "user_password": "hashed_password",
+    "user_type": "s",
+    "user_account_status": "s"
+  },
+  {
+    "control_faculty_id": 12345678907,
+    "user_email": "user8@example.com",
+    "user_phone": "555-444-5555",
+    "user_fullname": "Michael Johnson",
+    "user_password": "hashed_password",
+    "user_type": "f",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678908,
+    "user_email": "user9@example.com",
+    "user_phone": "555-555-6666",
+    "user_fullname": "Olivia Davis",
+    "user_password": "hashed_password",
+    "user_type": "s",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678909,
+    "user_email": "user10@example.com",
+    "user_phone": "555-666-7777",
+    "user_fullname": "William Smith",
+    "user_password": "hashed_password",
+    "user_type": "f",
+    "user_account_status": "a"
+  },
+  {
+    "control_faculty_id": 12345678910,
+    "user_email": "user11@example.com",
+    "user_phone": "555-777-8888",
+    "user_fullname": "Sophia Johnson",
+    "user_password": "hashed_password",
+    "user_type": "s",
+    "user_account_status": "a"
+  }
+]

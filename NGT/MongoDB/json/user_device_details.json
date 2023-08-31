@@ -1,0 +1,32 @@
+[
+  {
+    "device_id": 98765432101,
+    "device_token": "device_token_user2",
+    "user_id": 12345678901,
+    "admin_id": null
+  },
+  {
+    "device_id": 98765432102,
+    "device_token": "device_token_user3",
+    "user_id": 12345678902,
+    "admin_id": null
+  },
+  {
+    "device_id": 98765432103,
+    "device_token": "device_token_user4",
+    "user_id": 12345678903,
+    "admin_id": null
+  },
+  {
+    "device_id": 98765432104,
+    "device_token": "device_token_user5",
+    "user_id": 12345678904,
+    "admin_id": null
+  },
+  {
+    "device_id": 98765432111,
+    "device_token": "device_token_admin",
+    "user_id": null,
+    "admin_id": 12345678907
+  }
+]

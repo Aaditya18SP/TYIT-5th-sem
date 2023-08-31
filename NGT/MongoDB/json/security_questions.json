@@ -1,0 +1,52 @@
+[
+  {
+    "sqa_question": "What is your favorite color?",
+    "sqa_answer": "Blue",
+    "sqa_r_id": 60000000002
+  },
+  {
+    "sqa_question": "What was the name of your first pet?",
+    "sqa_answer": "Buddy",
+    "sqa_r_id": 60000000003
+  },
+  {
+    "sqa_question": "Where were you born?",
+    "sqa_answer": "New York",
+    "sqa_r_id": 60000000004
+  },
+  {
+    "sqa_question": "What is the name of your best friend?",
+    "sqa_answer": "Emily",
+    "sqa_r_id": 60000000005
+  },
+  {
+    "sqa_question": "What is your favorite book?",
+    "sqa_answer": "Harry Potter",
+    "sqa_r_id": 60000000006
+  },
+  {
+    "sqa_question": "What is the name of your favorite teacher?",
+    "sqa_answer": "Mr. Johnson",
+    "sqa_r_id": 60000000007
+  },
+  {
+    "sqa_question": "What is your mother's birthplace?",
+    "sqa_answer": "Chicago",
+    "sqa_r_id": 60000000008
+  },
+  {
+    "sqa_question": "What is your favorite food?",
+    "sqa_answer": "Pizza",
+    "sqa_r_id": 60000000009
+  },
+  {
+    "sqa_question": "What is the name of your first school?",
+    "sqa_answer": "Maple Elementary",
+    "sqa_r_id": 60000000010
+  },
+  {
+    "sqa_question": "What is your favorite movie?",
+    "sqa_answer": "The Avengers",
+    "sqa_r_id": 60000000011
+  }
+]

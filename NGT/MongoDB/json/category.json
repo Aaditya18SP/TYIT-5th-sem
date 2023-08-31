@@ -1,0 +1,42 @@
+[
+  {
+    "cat_id": 50000000002,
+    "cat_name": "Electronics"
+  },
+  {
+    "cat_id": 50000000003,
+    "cat_name": "Clothing"
+  },
+  {
+    "cat_id": 50000000004,
+    "cat_name": "Accessories"
+  },
+  {
+    "cat_id": 50000000005,
+    "cat_name": "Books"
+  },
+  {
+    "cat_id": 50000000006,
+    "cat_name": "Jewelry"
+  },
+  {
+    "cat_id": 50000000007,
+    "cat_name": "Sports Equipment"
+  },
+  {
+    "cat_id": 50000000008,
+    "cat_name": "Furniture"
+  },
+  {
+    "cat_id": 50000000009,
+    "cat_name": "Art and Crafts"
+  },
+  {
+    "cat_id": 50000000010,
+    "cat_name": "Toys"
+  },
+  {
+    "cat_id": 50000000011,
+    "cat_name": "Personal Documents"
+  }
+]
