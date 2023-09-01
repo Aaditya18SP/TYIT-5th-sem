@@ -1,0 +1,27 @@
+use dummy_db
+switched to db dummy_db
+> db.createCollection("cars");
+{ "ok" : 1 }
+> db.cars
+dummy_db.cars
+> show collections
+cars
+> db.createCollection("new_col1")
+{ "ok" : 1 }
+> db.createCollection("new_col2")
+{ "ok" : 1 }
+> db.createCollection("new_col3")
+{ "ok" : 1 }
+> show collections
+cars
+new_col1
+new_col2
+new_col3
+> db.new_col3.drop()
+true
+> db.new_col2.drop()
+true
+> db.new_col1.drop()
+true
+> show collections
+cars

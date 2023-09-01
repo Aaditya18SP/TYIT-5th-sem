@@ -1,0 +1,15 @@
+> use drop_this_db
+switched to db drop_this_db
+> db.new_user.insert({"name":"ABC","age":16});
+WriteResult({ "nInserted" : 1 })
+> db.new_car.insert({"car_brand":"TATA","car_name":"Safari"});
+WriteResult({ "nInserted" : 1 })
+> db.dropCollection("new_car");
+2023-09-01T09:53:26.191+0530 E QUERY    [js] TypeError: db.dropCollection is not a function :
+@(shell):1:1
+> db.new_car.drop();
+true
+> show collections
+new_user
+> db.dropDatabase()
+{ "dropped" : "drop_this_db", "ok" : 1 }

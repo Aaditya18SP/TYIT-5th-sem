@@ -26,6 +26,7 @@ Retrieve messages not sent by user 12345678901 to admin 12345678902 nor by admin
 Get reported items that were neither lost in the library nor in progress.
 Find items that were not reported by user 12345678903 nor verified.
 Retrieve reported items with a location neither "Street" nor "Library".
+
 $set and $unset (UPDATE):
 Update the progress of a reported item with r_id 60000000001 to "completed."
 Set the user_date_reported field to the current date for the reported item with r_id 60000000002.
@@ -41,6 +42,7 @@ Unset the from_admin_id field from a message with m_id 80000000002.
 Remove the user_account_status field from the user with control_faculty_id 12345678903.
 Unset the admin_id field from a reported item with r_id 60000000004.
 Remove the r_location field from the reported item with r_id 60000000005.
+
 $lt,$lte,$gt,$gte,$ne,$nin,$eq,$exists(UPDATE):
 Find reported items with a date of loss greater than or equal to "2023-09-01".
 Find users with an age less than 30.
@@ -53,6 +55,11 @@ Find reported items with a progress status of "in_progress" and a category ID of
 Find users with an age greater than or equal to 18 and less than 60.
 Find reported items with a date of loss between "2023-08-15" and "2023-09-15".
 Count the total number of reported items with a progress status of "in_progress".
+
+//DELETE
+Remove the all the details of the user 12345678905 including messages, reported item.
+
+//PROJECTOR
 count(), limit(),sort(),skip(),findOne()
 Find and count the number of reported items with a location in alphabetical order (ascending).
 Find and count the number of reported items with a progress status of "completed" and limit the result to 5 items.
