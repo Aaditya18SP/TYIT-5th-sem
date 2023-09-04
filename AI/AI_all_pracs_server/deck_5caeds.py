@@ -1,4 +1,4 @@
- # import modules
+# import modules
 import itertools, random
 # make a deck of cards
 deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
@@ -6,6 +6,5 @@ deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
 random.shuffle(deck)
 # draw five cards
 print("You got:")
-for i in range(3):
-    print(deck[i][0], "of", deck[i][1])
-
+for i in range(5):
+    print(deck[i][0], "of", deck[i][1])
