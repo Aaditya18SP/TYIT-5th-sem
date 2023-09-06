@@ -15,13 +15,21 @@ console.log(stringifiedData);
 const parsedData=JSON.parse(stringifiedData);
 console.log(parsedData);
 
+/*
 const arr=Array.from(parsedData);
 console.log(arr);
-var divDisplay = document.getElementById("displayDiv");
 
+*/
+
+var divDisplay = document.getElementById("displayDiv");
+for(i=0;i<parsedData.length;i++){
+    divDisplay.innerText+= " \n"+i+"." +parsedData[i].name + " \n \t description: " + parsedData[i].description;
+}
+/*
 for(i=0;i<arr.length;i++){
     divDisplay.innerText+= " \n"+i+"." +arr[i].name + " \n \t description: " + arr[i].description;
 }
+*/
 }
 
 fetchJSON();
