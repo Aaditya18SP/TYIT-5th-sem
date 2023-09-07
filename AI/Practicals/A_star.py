@@ -35,7 +35,7 @@ for number in '123456789e':
     goal_position[number]=find_location(rows_goal,number)
 
 class EightPuzzleProblem(SearchProblem):
-    def actions(seld,state):
+    def actions(self,state):
         '''Returns a list of the pieces we can move to the empty space'''
         rows=string_to_list(state)
         row_e,col_e=find_location(rows,'e')
@@ -83,4 +83,51 @@ result =astar(EightPuzzleProblem(INITIAL))
 for action,state in result.path():
     print('Movenumber',action)
     print(state)
-    
+
+
+'''OUTPUT
+Movenumber None
+4-1-2
+7-3-e
+8-5-6
+Movenumber 3
+4-1-2
+7-e-3
+8-5-6
+Movenumber 5
+4-1-2
+7-5-3
+8-e-6
+Movenumber 8
+4-1-2
+7-5-3
+e-8-6
+Movenumber 7
+4-1-2
+e-5-3
+7-8-6
+Movenumber 4
+e-1-2
+4-5-3
+7-8-6
+Movenumber 1
+1-e-2
+4-5-3
+7-8-6
+Movenumber 2
+1-2-e
+4-5-3
+7-8-6
+Movenumber 3
+1-2-3
+4-5-e
+7-8-6
+Movenumber 6
+1-2-3
+4-5-6
+7-8-e
+Movenumber 8
+1-2-3
+4-5-6
+7-e-8
+'''

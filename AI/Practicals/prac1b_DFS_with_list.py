@@ -5,31 +5,31 @@ graph ={'A':list(['B','C']),
         'E':list(['B','F']),
         'F':list(['E','C'])
          }
-def bfs(graph,start):
-    visited,queue=list(),[start]
-    while queue:
-        vertex=queue.pop(0)
+def dfs(graph,start):
+    visited,stack=list(),[start]
+    while stack:
+        vertex=stack.pop()
         if vertex not in visited:
             visited.append(vertex)
             print("current vertex: ",vertex) 
             print("possible vertices to go to: ",graph[vertex])
             print("visited: ", visited)
-            queue.extend(graph[vertex])
+            stack.extend(graph[vertex])
     return visited
 
-print("BFS:",bfs(graph,"B"),"\n")
+print("DFS:",dfs(graph,"B"),"\n")
 
 '''
-This is done as BFS with set doesnt retain the order in which the nodes are visited.
+This is done as DFS with set doesnt retain the order in which the nodes are visited.
 With a list, theo order of the visited nodes is preserved hence we get the required output
 '''
 
-def bfs_paths(graph,start,goal):
-    queue=[(start,[start])]
-    print("in the start the queue is:",queue) #delete this
-    while queue:
-        (vertex,path)=queue.pop(0)
-        print("\ncurrent queue after pop is:",queue) #delete this
+def dfs_paths(graph,start,goal):
+    stack=[(start,[start])]
+    print("in the start the stack is:",stack) #delete this
+    while stack:
+        (vertex,path)=stack.pop()
+        print("\ncurrent stack after pop is:",stack) #delete this
         
         print("current vertex is:", vertex)#delete this
         print("current path is:", path)#delete this
@@ -43,19 +43,19 @@ def bfs_paths(graph,start,goal):
                 yield path+[next]
                 
             else:
-                queue.append((next,path+[next]))
-                print("appended queue is:",queue)#delete this
+                stack.append((next,path+[next]))
+                print("appended stack is:",stack)#delete this
                 
 
 def shortest_path(graph,start,goal):
     try:
-        return next(bfs_paths(graph,start,goal))
+        return next(dfs_paths(graph,start,goal))
     except:
         return None
 
 print("the paths to reach from the given start and end goal:")
-print ("BFS paths:",list(bfs_paths(graph,'A','F')))
+print ("DFS paths:",list(dfs_paths(graph,'B','F')))
 
 #get the shortest path
-print("shortest path:",shortest_path(graph,'A','F'))
+print("shortest path:",shortest_path(graph,'B','F'))
 
