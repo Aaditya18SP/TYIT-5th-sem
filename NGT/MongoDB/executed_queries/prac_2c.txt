@@ -916,7 +916,29 @@ db.messages.insertMany([
 >db.users.update({"control_faculty_id":12345678901},{$set:{"user_email_id":"newupdateemailid@gmail.com"}});
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
-//2.Remove the user_phone field from the user with control_faculty_id 12345678902.
+
+//3. add faq section to the faqs
+lost_and_found_db> db.faq.update({},{$set:{"faq_section":""}},{multi:true})
+DeprecationWarning: Collection.update() is deprecated. Use updateOne, updateMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 11,
+  modifiedCount: 11,
+  upsertedCount: 0
+}
+
+lost_and_found_db> db.faq.find()
+[
+  {
+    _id: ObjectId("64f99303584e545695bfbcae"),
+    faq_id: 40000000001,
+    faq_question: 'What is this?',
+    faq_answer: 'This is the answer.',
+    faq_section: ''
+  },
+
+//3.Remove the user_phone field from the user with control_faculty_id 12345678902.
 >db.users.update({"control_faculty_id":12345678902},{$unset:{"user_phone":""}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.users.find({"control_faculty_id":12345678902});
@@ -929,3 +951,6 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 > db.users.remove({"control_faculty_id":12345678905});
 WriteResult({ "nRemoved" : 1 })
 
+//2.Remove the messages sent by admin to user with control_faculty_id 1.
+>db.messages.remove({"from_admin_id":{$ne:null},"to_user_id":1})
+{ acknowledged: true, deletedCount: 1 }

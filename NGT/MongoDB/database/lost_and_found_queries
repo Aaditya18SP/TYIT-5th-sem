@@ -6,6 +6,7 @@ Retrieve messages sent by user 12345678901 to admin 12345678902 and sent by admi
 Get reported items that were lost in the library and have a progress status of "l".
 Find items that were reported by user 12345678903 and have not been verified yet.
 Retrieve reported items with a location of "Street" and a category either "Sports Equipment" or "Jewelry".
+
 OR operator
 Find reported items that were lost after "2023-08-31" or have been reported as "stolen".
 Retrieve messages sent by user 12345678901 to admin 12345678902 or admin 12345678902 to user 12345678901.
