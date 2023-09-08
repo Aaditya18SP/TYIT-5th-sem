@@ -31,3 +31,19 @@ Console.WriteLine("The product is : {0} ", obj.multiply(a,b,c,d) );
 
 
 }
+
+/*
+OUTPUT
+Enter num1:
+12
+Enter num2:
+23
+Enter num3:
+34
+Enter num4:
+332
+The product is : 3115488
+
+
+
+*/

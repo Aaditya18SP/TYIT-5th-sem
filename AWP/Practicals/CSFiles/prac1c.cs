@@ -92,3 +92,42 @@ obj.displayInfo();
 
 }
 }
+
+/*OUTPUT
+Enter total number of students:2
+
+Reading info
+
+
+NEW STUDENT
+Enter firstname:aaditya
+Enter lastname:pal
+Enter roll no:a029
+Enter age:20
+
+NEW STUDENT
+Enter firstname:rushya
+Enter lastname:shinde
+Enter roll no:a047
+Enter age:21
+
+Displaying info
+
+
+Student 1
+
+Firstname:aaditya
+Lastname:pal
+Age:20
+Roll no:a029
+
+Student 2
+
+Firstname:rushya
+Lastname:shinde
+Age:21
+Roll no:a047
+
+
+
+*/

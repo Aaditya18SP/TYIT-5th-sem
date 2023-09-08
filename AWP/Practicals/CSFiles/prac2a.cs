@@ -34,11 +34,11 @@ class prac2a{
     }
 
     public double fahrenheitToCelsius(double fah){
-        return (fah-32) * (5/9);
+        return (fah-32) * (5.0/9.0);
     }
 
     public double celsiusToFahrenheit(double cel){
-        return (cel* (9/5)) +32;
+        return (cel* (9.0/5.0)) +32;
     }
 
 }
@@ -93,3 +93,65 @@ class prac2a_execution{
         }
     }
 }
+
+/*
+1.Find Factorial
+ 2.Convert Fahrenheit to Celsius
+ 3.Convert Celsius to Fahrenheit
+ 4.Convert Dollars to Rupees
+ 5.Convert Rupees to Dollars
+ 0.Exit
+ Select your choice:1
+Enter the number you want factorial of:5
+The factorial is:120
+1.Find Factorial
+ 2.Convert Fahrenheit to Celsius
+ 3.Convert Celsius to Fahrenheit
+ 4.Convert Dollars to Rupees
+ 5.Convert Rupees to Dollars
+ 0.Exit
+ Select your choice:2
+Enter the temperature in Fahrenheit:132
+The temperature in celsius is:55.5555555555556°C
+1.Find Factorial
+ 2.Convert Fahrenheit to Celsius
+ 3.Convert Celsius to Fahrenheit
+ 4.Convert Dollars to Rupees
+ 5.Convert Rupees to Dollars
+ 0.Exit
+ Select your choice:3
+Enter the temperature in Celsius:45
+The temperature in Fahrenheit is:113°F
+1.Find Factorial
+ 2.Convert Fahrenheit to Celsius
+ 3.Convert Celsius to Fahrenheit
+ 4.Convert Dollars to Rupees
+ 5.Convert Rupees to Dollars
+ 0.Exit
+ Select your choice:4
+Enter the amount in dollars:23
+The amount in Rupees is:INR 1902.56002807617
+1.Find Factorial
+ 2.Convert Fahrenheit to Celsius
+ 3.Convert Celsius to Fahrenheit
+ 4.Convert Dollars to Rupees
+ 5.Convert Rupees to Dollars
+ 0.Exit
+ Select your choice:5
+Enter the amount in Rupees:2344
+The amount in Dollars is:$28.3365566417974
+1.Find Factorial
+ 2.Convert Fahrenheit to Celsius
+ 3.Convert Celsius to Fahrenheit
+ 4.Convert Dollars to Rupees
+ 5.Convert Rupees to Dollars
+ 0.Exit
+ Select your choice:0
+
+
+
+
+
+
+
+*/

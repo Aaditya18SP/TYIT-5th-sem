@@ -98,3 +98,34 @@ string[] array= {"these","are", "separate","words","to","be","joined"};
 Console.WriteLine("joined string:{0}", String.Join("-",array));
 }
 }
+
+/*
+OUTPUT
+Enter the brand:porsche
+ Enter the model:911 GT3RS
+Your car : porsche 911 GT3RS
+In Upper Case : PORSCHE 911 GT3RS
+Lower Case : porsche 911 gt3rs
+Replaced String: porsche$911$GT3RS
+Index of letter e: 6
+Removed the letter e: porsch 911 GT3RS
+Padding from the left with _ : ___porsche 911 GT3RS
+Padding from the right with _ : porsche 911 GT3RS___
+Padding from the right with _ : ___porsche 911 GT3RS____________________
+Trim the _ from start: porsche 911 GT3RS____________________
+Trim the _ from end : ___porsche 911 GT3RS
+Trim the _ from both ends: porsche 911 GT3RS
+Split at whitespace: porsche 911
+A substring :rsche 9
+does it start with p: True
+does it end with e: False
+Inserting a string at specified index: 991.2 !  porsche 911 GT3RS
+Does it contain a specified string: False
+Comparison result after comparing two strings: -1
+Is it equal to specified string :False
+joined string:these-are-separate-words-to-be-joined
+
+
+
+
+*/
