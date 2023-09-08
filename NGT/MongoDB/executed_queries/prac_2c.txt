@@ -939,8 +939,8 @@ db.messages.find({"from_admin_id":{$ne:null}})
 //5. Find the reported items that do not belong to stationary, electronics or clothing category
  db.reported_item.find({"category_id":{$nin:[50000000004,50000000001,50000000002]}})
 
-//6. Find reported items with a date of loss between "2023-08-15" and "2023-09-15".
-
+//6. Find reported items with a date of loss before "2023-08-15" or after "2023-09-15".
+db.reported_item.find({$or:[{"r_date_of_loss": {$lte:new Date("2023-08-15")}}, {"r_date_of_loss": {$gte:new Date("2023-09-15")} } ] } );
 
 //ELEMENT OPERATORS
 //1.Find messages with no "to_user_id" field.
