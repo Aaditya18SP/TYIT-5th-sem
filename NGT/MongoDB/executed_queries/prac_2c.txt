@@ -1,923 +1,927 @@
 //INSERT QUERIES
-db.users.insertMany([ {"control_faculty_id":12345678900,"user_email":"user@example.com","user_phone":"123-456-7890","user_fullname":"John Doe","user_password":"hashed_password","user_type":"s","user_account_status":"a"}])
-{
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f15a2dab5772976c3b68ad")
-        ]
-}
->  db.users.insertMany([
+
+lost_and_found_db> // Users Collection
+
+lost_and_found_db> db.createCollection("users");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Admin Users Collection
+
+lost_and_found_db> db.createCollection("admin_users");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // User Device Details Collection
+
+lost_and_found_db> db.createCollection("user_device_details");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // FAQ Collection
+
+lost_and_found_db> db.createCollection("faq");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Category Collection
+
+lost_and_found_db> db.createCollection("category");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Reported Item Collection
+
+lost_and_found_db> db.createCollection("reported_item");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db>
+
+lost_and_found_db> // Reported Image Collection
+
+lost_and_found_db> db.createCollection("reported_image");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Messages Collection
+
+lost_and_found_db> db.createCollection("messages");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Create collection and indexes
+
+lost_and_found_db> db.createCollection("security_qa");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Create security question-answer collection
+
+lost_and_found_db> db.createCollection("security_qa");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> // Answers Collection
+
+lost_and_found_db> db.createCollection("answers");
+{ ok: 1 }
+lost_and_found_db>
+
+lost_and_found_db> //INSERT DUMMY DATA
+
+lost_and_found_db>
+
+lost_and_found_db> db.users.insertMany([
 ...   {
-...     "control_faculty_id": 12345678901,
-...     "user_email": "user2@example.com",
-...     "user_phone": "555-123-4567",
-...     "user_fullname": "Jane Smith",
-...     "user_password": "hashed_password",
-...     "user_type": "f",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678901,
+...     user_email: "user2@example.com",
+...     user_phone: "5551234567",
+...     user_fullname: "Jane Smith",
+...     user_password: "hashed_password",
+...     user_type: "f",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678902,
-...     "user_email": "user3@example.com",
-...     "user_phone": "555-987-6543",
-...     "user_fullname": "Alice Johnson",
-...     "user_password": "hashed_password",
-...     "user_type": "s",
-...     "user_account_status": "s"
+...     control_faculty_id: 12345678902,
+...     user_email: "user3@example.com",
+...     user_phone: "5559876543",
+...     user_fullname: "Alice Johnson",
+...     user_password: "hashed_password",
+...     user_type: "s",
+...     user_account_status: "s",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678903,
-...     "user_email": "user4@example.com",
-...     "user_phone": "555-555-5555",
-...     "user_fullname": "Bob Anderson",
-...     "user_password": "hashed_password",
-...     "user_type": "f",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678903,
+...     user_email: "user4@example.com",
+...     user_phone: "5555555555",
+...     user_fullname: "Bob Anderson",
+...     user_password: "hashed_password",
+...     user_type: "f",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678904,
-...     "user_email": "user5@example.com",
-...     "user_phone": "555-111-2222",
-...     "user_fullname": "Eve Lee",
-...     "user_password": "hashed_password",
-...     "user_type": "s",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678904,
+...     user_email: "user5@example.com",
+...     user_phone: "5551112222",
+...     user_fullname: "Eve Lee",
+...     user_password: "hashed_password",
+...     user_type: "s",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678905,
-...     "user_email": "user6@example.com",
-...     "user_phone": "555-222-3333",
-...     "user_fullname": "Alex Brown",
-...     "user_password": "hashed_password",
-...     "user_type": "f",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678905,
+...     user_email: "user6@example.com",
+...     user_phone: "5552223333",
+...     user_fullname: "Alex Brown",
+...     user_password: "hashed_password",
+...     user_type: "f",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678906,
-...     "user_email": "user7@example.com",
-...     "user_phone": "555-333-4444",
-...     "user_fullname": "Grace Taylor",
-...     "user_password": "hashed_password",
-...     "user_type": "s",
-...     "user_account_status": "s"
+...     control_faculty_id: 12345678906,
+...     user_email: "user7@example.com",
+...     user_phone: "5553334444",
+...     user_fullname: "Grace Taylor",
+...     user_password: "hashed_password",
+...     user_type: "s",
+...     user_account_status: "s",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678907,
-...     "user_email": "user8@example.com",
-...     "user_phone": "555-444-5555",
-...     "user_fullname": "Michael Johnson",
-...     "user_password": "hashed_password",
-...     "user_type": "f",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678907,
+...     user_email: "user8@example.com",
+...     user_phone: "5554445555",
+...     user_fullname: "Michael Johnson",
+...     user_password: "hashed_password",
+...     user_type: "f",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678908,
-...     "user_email": "user9@example.com",
-...     "user_phone": "555-555-6666",
-...     "user_fullname": "Olivia Davis",
-...     "user_password": "hashed_password",
-...     "user_type": "s",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678908,
+...     user_email: "user9@example.com",
+...     user_phone: "5555556666",
+...     user_fullname: "Olivia Davis",
+...     user_password: "hashed_password",
+...     user_type: "s",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678909,
-...     "user_email": "user10@example.com",
-...     "user_phone": "555-666-7777",
-...     "user_fullname": "William Smith",
-...     "user_password": "hashed_password",
-...     "user_type": "f",
-...     "user_account_status": "a"
+...     control_faculty_id: 12345678909,
+...     user_email: "user10@example.com",
+...     user_phone: "5556667777",
+...     user_fullname: "William Smith",
+...     user_password: "hashed_password",
+...     user_type: "f",
+...     user_account_status: "a",
 ...   },
 ...   {
-...     "control_faculty_id": 12345678910,
-...     "user_email": "user11@example.com",
-...     "user_phone": "555-777-8888",
-...     "user_fullname": "Sophia Johnson",
-...     "user_password": "hashed_password",
-...     "user_type": "s",
-...     "user_account_status": "a"
-...   }
+...     control_faculty_id: 12345678910,
+...     user_email: "user11@example.com",
+...     user_phone: "5557778888",
+...     user_fullname: "Sophia Johnson",
+...     user_password: "hashed_password",
+...     user_type: "s",
+...     user_account_status: "a",
+...   },
 ... ]);
 {
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f15a88ab5772976c3b68ae"),
-                ObjectId("64f15a88ab5772976c3b68af"),
-                ObjectId("64f15a88ab5772976c3b68b0"),
-                ObjectId("64f15a88ab5772976c3b68b1"),
-                ObjectId("64f15a88ab5772976c3b68b2"),
-                ObjectId("64f15a88ab5772976c3b68b3"),
-                ObjectId("64f15a88ab5772976c3b68b4"),
-                ObjectId("64f15a88ab5772976c3b68b5"),
-                ObjectId("64f15a88ab5772976c3b68b6"),
-                ObjectId("64f15a88ab5772976c3b68b7")
-        ]
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481116d97fb1f89e5cdd"),
+    '1': ObjectId("64fb481116d97fb1f89e5cde"),
+    '2': ObjectId("64fb481116d97fb1f89e5cdf"),
+    '3': ObjectId("64fb481116d97fb1f89e5ce0"),
+    '4': ObjectId("64fb481116d97fb1f89e5ce1"),
+    '5': ObjectId("64fb481116d97fb1f89e5ce2"),
+    '6': ObjectId("64fb481116d97fb1f89e5ce3"),
+    '7': ObjectId("64fb481116d97fb1f89e5ce4"),
+    '8': ObjectId("64fb481116d97fb1f89e5ce5"),
+    '9': ObjectId("64fb481116d97fb1f89e5ce6")
+  }
 }
+lost_and_found_db>
 
+lost_and_found_db> //ADMIN
 
-//ADMIN
-> db.createCollection("admin_users")
-{ "ok" : 1 }
-> db.admin_users.insertOne({
-...   "admin_id": 20000000001,
-...   "admin_email": "admin@example.com",
-...   "admin_phone": "987-654-3210",
-...   "admin_fullname": "Admin Name",
-...   "admin_password": "hashed_password"
-... })
-{
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f15d9cab5772976c3b68b8")
-}
->
-
-//USER_DEVICE_DETAILS
-> db.createCollection("user_device_details")
-{ "ok" : 1 }
-> db.user_device_details.createIndex({ "user_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 1,
-        "numIndexesAfter" : 2,
-        "ok" : 1
-}
-> db.user_device_details.createIndex({ "admin_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 2,
-        "numIndexesAfter" : 3,
-        "ok" : 1
-}
-> db.user_device_details.insertOne({
-...   "device_id": 98765432100,
-...   "device_token": "device_token_here",
-...   "user_id": 12345678900,
-...   "admin_id": null
-... })
-{
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f15dcdab5772976c3b68b9")
-}
-
-//inserting more records
-db.user_device_details.insertMany([
-...   {
-...     "device_id": 98765432101,
-...     "device_token": "device_token_user2",
-...     "user_id": 12345678901,
-...     "admin_id": null
-...   },
-...   {
-...     "device_id": 98765432102,
-...     "device_token": "device_token_user3",
-...     "user_id": 12345678902,
-...     "admin_id": null
-...   },
-...   {
-...     "device_id": 98765432103,
-...     "device_token": "device_token_user4",
-...     "user_id": 12345678903,
-...     "admin_id": null
-...   },
-...   {
-...     "device_id": 98765432104,
-...     "device_token": "device_token_user5",
-...     "user_id": 12345678904,
-...     "admin_id": null
-...   },
-...   // Insert more documents for other users...
-... ]);
-{
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f16004ab5772976c3b68ba"),
-                ObjectId("64f16004ab5772976c3b68bb"),
-                ObjectId("64f16004ab5772976c3b68bc"),
-                ObjectId("64f16004ab5772976c3b68bd")
-        ]
-}
->
-> // Inserting a device for admin (admin_id is present, user_id is null)
-> db.user_device_details.insertOne({
-...   "device_id": 98765432111,
-...   "device_token": "device_token_admin",
-...   "user_id": null,
-...   "admin_id": 12345678907
+lost_and_found_db> db.admin_users.insertOne({
+...   admin_id: 20000000001,
+...   admin_email: "admin@example.com",
+...   admin_phone: "9876543210",
+...   admin_fullname: "Admin Name",
+...   admin_password: "hashed_password",
 ... });
 {
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f1600aab5772976c3b68be")
+  acknowledged: true,
+  insertedId: ObjectId("64fb481116d97fb1f89e5ce7")
 }
+lost_and_found_db>
 
+lost_and_found_db> //USER DEVICE DETAILS
 
-//FAQ
- db.createCollection("faq")
-{ "ok" : 1 }
-> db.faq.insertOne({
-...   "faq_id": 40000000001,
-...   "faq_question": "What is this?",
-...   "faq_answer": "This is the answer."
-... })
+lost_and_found_db>
+
+lost_and_found_db> // Inserting devices for users with user_id (admin_id is null)
+
+lost_and_found_db> db.user_device_details.insertMany([
+...   {
+...     device_id: 98765432101,
+...     device_token: "device_token_user2",
+...     user_id: 12345678901,
+...     admin_id: null,
+...   },
+...   {
+...     device_id: 98765432102,
+...     device_token: "device_token_user3",
+...     user_id: 12345678902,
+...     admin_id: null,
+...   },
+...   {
+...     device_id: 98765432103,
+...     device_token: "device_token_user4",
+...     user_id: 12345678903,
+...     admin_id: null,
+...   },
+...   {
+...     device_id: 98765432104,
+...     device_token: "device_token_user5",
+...     user_id: 12345678904,
+...     admin_id: null,
+...   }
+...
+... ]);
 {
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f1604dab5772976c3b68bf")
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481216d97fb1f89e5ce8"),
+    '1': ObjectId("64fb481216d97fb1f89e5ce9"),
+    '2': ObjectId("64fb481216d97fb1f89e5cea"),
+    '3': ObjectId("64fb481216d97fb1f89e5ceb")
+  }
 }
+lost_and_found_db>
 
-//Insert multiple records
- db.faq.insertMany([
+lost_and_found_db> // Inserting a device for admin (admin_id is present, user_id is null)
+
+lost_and_found_db> db.user_device_details.insertOne({
+...   device_id: 98765432111,
+...   device_token: "device_token_admin",
+...   user_id: null,
+...   admin_id: 12345678907,
+... });
+{
+  acknowledged: true,
+  insertedId: ObjectId("64fb481216d97fb1f89e5cec")
+}
+lost_and_found_db>
+
+lost_and_found_db> //FAQ
+
+lost_and_found_db> db.faq.insertMany([
 ...   {
-...     "faq_id": 40000000002,
-...     "faq_question": "How does this work?",
-...     "faq_answer": "This works by..."
+...     faq_id: 40000000001,
+...     faq_question: "What is this?",
+...     faq_answer: "This is the answer.",
 ...   },
 ...   {
-...     "faq_id": 40000000003,
-...     "faq_question": "Is there a user guide?",
-...     "faq_answer": "Yes, there is a comprehensive user guide available."
+...     faq_id: 40000000002,
+...     faq_question: "How does this work?",
+...     faq_answer: "This works by...",
 ...   },
 ...   {
-...     "faq_id": 40000000004,
-...     "faq_question": "What are the system requirements?",
-...     "faq_answer": "The system requires..."
+...     faq_id: 40000000003,
+...     faq_question: "Is there a user guide?",
+...     faq_answer: "Yes, there is a comprehensive user guide available.",
 ...   },
 ...   {
-...     "faq_id": 40000000005,
-...     "faq_question": "Can I customize the settings?",
-...     "faq_answer": "Yes, you can customize various settings as per your preference."
+...     faq_id: 40000000004,
+...     faq_question: "What are the system requirements?",
+...     faq_answer: "The system requires...",
 ...   },
 ...   {
-...     "faq_id": 40000000006,
-...     "faq_question": "How do I reset my password?",
-...     "faq_answer": "To reset your password, go to the 'Forgot Password' page..."
+...     faq_id: 40000000005,
+...     faq_question: "Can I customize the settings?",
+...     faq_answer:
+...       "Yes, you can customize various settings as per your preference.",
 ...   },
 ...   {
-...     "faq_id": 40000000007,
-...     "faq_question": "What is the pricing?",
-...     "faq_answer": "For pricing details, visit our pricing page or contact our sales team."
+...     faq_id: 40000000006,
+...     faq_question: "How do I reset my password?",
+...     faq_answer: "To reset your password, go to the 'Forgot Password' page...",
 ...   },
 ...   {
-...     "faq_id": 40000000008,
-...     "faq_question": "Is customer support available 24/7?",
-...     "faq_answer": "Yes, our customer support team is available around the clock."
+...     faq_id: 40000000007,
+...     faq_question: "What is the pricing?",
+...     faq_answer:
+...       "For pricing details, visit our pricing page or contact our sales team.",
 ...   },
 ...   {
-...     "faq_id": 40000000009,
-...     "faq_question": "How can I upgrade my plan?",
-...     "faq_answer": "To upgrade your plan, log in to your account and navigate to the upgrade section."
+...     faq_id: 40000000008,
+...     faq_question: "Is customer support available 24/7?",
+...     faq_answer: "Yes, our customer support team is available around the clock.",
 ...   },
 ...   {
-...     "faq_id": 40000000010,
-...     "faq_question": "Do you offer a free trial?",
-...     "faq_answer": "Yes, we offer a free trial period for new users."
+...     faq_id: 40000000009,
+...     faq_question: "How can I upgrade my plan?",
+...     faq_answer:
+...       "To upgrade your plan, log in to your account and navigate to the upgrade section.",
 ...   },
 ...   {
-...     "faq_id": 40000000011,
-...     "faq_question": "How do I contact customer support?",
-...     "faq_answer": "You can contact our customer support via phone, email, or live chat."
+...     faq_id: 40000000010,
+...     faq_question: "Do you offer a free trial?",
+...     faq_answer: "Yes, we offer a free trial period for new users.",
+...   },
+...   {
+...     faq_id: 40000000011,
+...     faq_question: "How do I contact customer support?",
+...     faq_answer:
+...       "You can contact our customer support via phone, email, or live chat.",
+...   },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481216d97fb1f89e5ced"),
+    '1': ObjectId("64fb481216d97fb1f89e5cee"),
+    '2': ObjectId("64fb481216d97fb1f89e5cef"),
+    '3': ObjectId("64fb481216d97fb1f89e5cf0"),
+    '4': ObjectId("64fb481216d97fb1f89e5cf1"),
+    '5': ObjectId("64fb481216d97fb1f89e5cf2"),
+    '6': ObjectId("64fb481216d97fb1f89e5cf3"),
+    '7': ObjectId("64fb481216d97fb1f89e5cf4"),
+    '8': ObjectId("64fb481216d97fb1f89e5cf5"),
+    '9': ObjectId("64fb481216d97fb1f89e5cf6"),
+    '10': ObjectId("64fb481216d97fb1f89e5cf7")
+  }
+}
+lost_and_found_db>
+
+lost_and_found_db> //CATEGORY
+
+lost_and_found_db> db.category.insertMany([
+...   {
+...     cat_id: 50000000001,
+...     cat_name: "Electronics",
+...   },
+...   {
+...     cat_id: 50000000002,
+...     cat_name: "Clothing",
+...   },
+...   {
+...     cat_id: 50000000003,
+...     cat_name: "Jewellery",
+...   },
+...   {
+...     cat_id: 50000000004,
+...     cat_name: "Stationary",
+...   },
+...   {
+...     cat_id: 50000000005,
+...     cat_name: "Riding gear",
+...   },
+...   {
+...     cat_id: 50000000006,
+...     cat_name: "Other",
+...   },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481216d97fb1f89e5cf8"),
+    '1': ObjectId("64fb481216d97fb1f89e5cf9"),
+    '2': ObjectId("64fb481216d97fb1f89e5cfa"),
+    '3': ObjectId("64fb481216d97fb1f89e5cfb"),
+    '4': ObjectId("64fb481216d97fb1f89e5cfc"),
+    '5': ObjectId("64fb481216d97fb1f89e5cfd")
+  }
+}
+lost_and_found_db>
+
+lost_and_found_db> //REPORTED ITEM
+
+lost_and_found_db> db.reported_item.insertMany([
+...   {
+...     r_id: 60000000001,
+...     r_name: "Blue Skybags Backpack",
+...     r_location: "321",
+...     r_time_of_loss: "12:34:56",
+...     r_date_of_loss: ISODate("2023-08-31"),
+...     r_progress: "f",
+...     r_reported_as: "f",
+...     r_description: "Description",
+...     category_id: 50000000002,
+...     admin_id: 20000000001,
+...     admin_date_reported: ISODate("2023-08-31"),
+...
+...   },
+...   {
+...     r_id: 60000000002,
+...     r_name: "Lost Wallet",
+...     r_location: "Canteen",
+...     r_time_of_loss: "15:30:00",
+...     r_date_of_loss: new Date("2023-08-15"),
+...     r_progress: "wlf",
+...     r_reported_as: "l",
+...     r_description: "Black leather wallet",
+...     category_id: 50000000004,
+...     admin_id: null,
+...     user_id: 12345678902,
+...     user_date_reported: new Date("2023-08-15"),
+...   },
+...   {
+...     r_id: 60000000003,
+...     r_name: "Stolen Phone",
+...     r_location: "215",
+...     r_time_of_loss: "08:45:00",
+...     r_date_of_loss: new Date("2023-07-20"),
+...     r_progress: "f",
+...     r_reported_as: "l",
+...     r_description: "Silver iPhone XS",
+...     category_id: 50000000002,
+...     admin_id: 12345678901,
+...     user_id: null,
+...     admin_date_reported: new Date("2023-07-20"),
+...   },
+...   {
+...     r_id: 60000000004,
+...     r_name: "Lost Backpack",
+...     r_location: "Library",
+...     r_time_of_loss: "11:20:00",
+...     r_date_of_loss: new Date("2023-09-05"),
+...     r_progress: "wlf",
+...     r_reported_as: "f",
+...     r_description: "Blue backpack with books",
+...     category_id: 50000000005,
+...     admin_id: null,
+...     user_id: 12345678904,
+...     user_date_reported: new Date("2023-09-05"),
+...   },
+...   {
+...     r_id: 60000000005,
+...     r_name: "Stolen Laptop",
+...     r_location: "IT Lab",
+...     r_time_of_loss: "09:00:00",
+...     r_date_of_loss: new Date("2023-08-10"),
+...     r_progress: "l",
+...     r_reported_as: "l",
+...     r_description: "Silver MacBook Pro",
+...     category_id: 50000000002,
+...     admin_id: 12345678901,
+...     user_id: null,
+...     admin_date_reported: new Date("2023-08-10"),
+...   },
+...   {
+...     r_id: 60000000006,
+...     r_name: "Gold Earrings and Necklace",
+...     r_location: "Gymkhana",
+...     r_time_of_loss: "20:15:00",
+...     r_date_of_loss: new Date("2023-09-20"),
+...     r_progress: "f",
+...     r_reported_as: "l",
+...     r_description: "Gold necklace and earrings. They were Jhumkas. The necklace was in a heart shape",
+...     category_id: 50000000003,
+...     admin_id: null,
+...     user_id: 12345678905,
+...     user_date_reported: new Date("2023-09-20"),
+...   },
+...   {
+...     r_id: 60000000007,
+...     r_name: "Hoodie",
+...     r_location: "101",
+...     r_time_of_loss: "14:00:00",
+...     r_date_of_loss: new Date("2023-08-25"),
+...     r_progress: "f",
+...     r_reported_as: "f",
+...     r_description: "Red mountain bike",
+...     category_id: 50000000004,
+...     admin_id: 12345678901,
+...     user_id: null,
+...     admin_date_reported: new Date("2023-08-25"),
+...   },
+...   {
+...     r_id: 60000000008,
+...     r_name: "Lost Wallet",
+...     r_location: "Auditorium",
+...     r_time_of_loss: "16:45:00",
+...     r_date_of_loss: new Date("2023-09-10"),
+...     r_progress: "l",
+...     r_reported_as: "l",
+...     r_description: "Brown leather wallet",
+...     category_id: 50000000001,
+...     admin_id: null,
+...     user_id: 12345678906,
+...     user_date_reported: new Date("2023-09-10"),
+...   },
+...   {
+...     r_id: 60000000009,
+...     r_name: "Rolex Watch",
+...     r_location: "Mini Auditorium",
+...     r_time_of_loss: "10:30:00",
+...     r_date_of_loss: new Date("2023-08-05"),
+...     r_progress: "l",
+...     r_reported_as: "l",
+...     r_description: "Silver wristwatch",
+...     category_id: 50000000003,
+...     admin_id: 12345678901,
+...     user_id: null,
+...     admin_date_reported: new Date("2023-08-05"),
+...   },
+...   {
+...     r_id: 60000000010,
+...     r_name: "Lost Umbrella",
+...     r_location: "501",
+...     r_time_of_loss: "18:00:00",
+...     r_date_of_loss: new Date("2023-09-15"),
+...     r_progress: "l",
+...     r_reported_as: "l",
+...     r_description: "Black folding umbrella",
+...     category_id: 50000000001,
+...     admin_id: null,
+...     user_id: 12345678907,
+...     user_date_reported: new Date("2023-09-15"),
+...   },
+...   {
+...     r_id: 60000000011,
+...     r_name: "Orange Helmet",
+...     r_location: "Commerce Lab",
+...     r_time_of_loss: "14:15:00",
+...     r_date_of_loss: new Date("2023-08-15"),
+...     r_progress: "l",
+...     r_reported_as: "l",
+...     r_description: "Black leather wallet",
+...     category_id: 50000000001,
+...     admin_id: 12345678902,
+...     user_id: null,
+...     admin_date_reported: new Date("2023-08-15"),
+...   },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481416d97fb1f89e5cfe"),
+    '1': ObjectId("64fb481416d97fb1f89e5cff"),
+    '2': ObjectId("64fb481416d97fb1f89e5d00"),
+    '3': ObjectId("64fb481416d97fb1f89e5d01"),
+    '4': ObjectId("64fb481416d97fb1f89e5d02"),
+    '5': ObjectId("64fb481416d97fb1f89e5d03"),
+    '6': ObjectId("64fb481416d97fb1f89e5d04"),
+    '7': ObjectId("64fb481416d97fb1f89e5d05"),
+    '8': ObjectId("64fb481416d97fb1f89e5d06"),
+    '9': ObjectId("64fb481416d97fb1f89e5d07"),
+    '10': ObjectId("64fb481416d97fb1f89e5d08")
+  }
+}
+lost_and_found_db>
+
+lost_and_found_db> //REPORTED ITEMS
+
+lost_and_found_db> db.reported_image.insertMany([
+...   {
+...     r_id: 60000000001,
+...     r_image: "image_url_here",
+...   },
+...   {
+...     r_id: 60000000002,
+...     r_images: ["image_url_1", "image_url_2", "image_url_3"],
+...   },
+...   {
+...     r_id: 60000000003,
+...     r_images: ["image_url_4", "image_url_5"],
+...   },
+...   {
+...     r_id: 60000000004,
+...     r_images: ["image_url_6"],
+...   },
+...   {
+...     r_id: 60000000005,
+...     r_images: ["image_url_7", "image_url_8"],
+...   },
+...   {
+...     r_id: 60000000006,
+...     r_images: ["image_url_9", "image_url_10"],
+...   },
+...   {
+...     r_id: 60000000007,
+...     r_images: ["image_url_11", "image_url_12"],
+...   },
+...   {
+...     r_id: 60000000008,
+...     r_images: ["image_url_13"],
+...   },
+...   {
+...     r_id: 60000000009,
+...     r_images: ["image_url_14"],
+...   },
+...   {
+...     r_id: 60000000010,
+...     r_images: ["image_url_15", "image_url_16"],
+...   },
+...   {
+...     r_id: 60000000011,
+...     r_images: ["image_url_17", "image_url_18", "image_url_19"],
+...   },
+... ]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481416d97fb1f89e5d09"),
+    '1': ObjectId("64fb481416d97fb1f89e5d0a"),
+    '2': ObjectId("64fb481416d97fb1f89e5d0b"),
+    '3': ObjectId("64fb481416d97fb1f89e5d0c"),
+    '4': ObjectId("64fb481416d97fb1f89e5d0d"),
+    '5': ObjectId("64fb481416d97fb1f89e5d0e"),
+    '6': ObjectId("64fb481416d97fb1f89e5d0f"),
+    '7': ObjectId("64fb481416d97fb1f89e5d10"),
+    '8': ObjectId("64fb481416d97fb1f89e5d11"),
+    '9': ObjectId("64fb481416d97fb1f89e5d12"),
+    '10': ObjectId("64fb481416d97fb1f89e5d13")
+  }
+}
+lost_and_found_db>
+
+lost_and_found_db> //MESSAGES
+
+lost_and_found_db> db.messages.insertMany([
+...   {
+...     m_id: 80000000001,
+...     m_content: "Message content",
+...     m_date: new Date("2023-08-12"),
+...     m_time: "12:34:56",
+...     to_user_id: 12345678904,
+...     from_user_id: null,
+...     to_admin_id: null,
+...     from_admin_id: 20000000001,
+...   },
+...   {
+...     m_id: 80000000002,
+...     m_content: "Hello, I lost my backpack. Can you assist?",
+...     m_date: new Date("2023-08-29"),
+...     m_time: "10:15:00",
+...     to_user_id: 12345678901,
+...     from_user_id: 12345678902,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000003,
+...     m_content:
+...       "Of course, I'd be happy to help. Please provide more details about your backpack.",
+...     m_date: new Date("2023-08-30"),
+...     m_time: "11:30:00",
+...     to_user_id: 12345678902,
+...     from_user_id: 12345678901,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000004,
+...     m_content: "Hi, I lost my laptop in the office.",
+...     m_date: new Date("2023-08-02"),
+...     m_time: "14:20:00",
+...     to_user_id: 12345678903,
+...     from_user_id: 12345678905,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000005,
+...     m_content: "I found your laptop. I'll give it to the admin.",
+...     m_date: new Date("2023-08-14"),
+...     m_time: "15:45:00",
+...     to_user_id: 12345678905,
+...     from_user_id: 12345678903,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000006,
+...     m_content: "Hello, I have a question about the lost and found process.",
+...     m_date: new Date("2023-08-08"),
+...     m_time: "09:10:00",
+...     to_user_id: 12345678904,
+...     from_user_id: 12345678901,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000007,
+...     m_content: "Absolutely, feel free to ask your question.",
+...     m_date: new Date("2023-08-18"),
+...     m_time: "10:30:00",
+...     to_user_id: 12345678901,
+...     from_user_id: 12345678904,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000008,
+...     m_content: "Hi, I lost my bicycle near the gym.",
+...     m_date: new Date("2023-08-14"),
+...     m_time: "13:05:00",
+...     to_user_id: 12345678906,
+...     from_user_id: 12345678907,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000009,
+...     m_content: "I'll check if anyone has reported it. I'll let you know.",
+...     m_date: new Date("2023-04-31"),
+...     m_time: "14:45:00",
+...     to_user_id: 12345678907,
+...     from_user_id: 12345678906,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000010,
+...     m_content: "Hello, I lost my jewelry in the park.",
+...     m_date: new Date("2023-06-24"),
+...     m_time: "11:50:00",
+...     to_user_id: 12345678908,
+...     from_user_id: 12345678909,
+...     to_admin_id: null,
+...     from_admin_id: null,
+...   },
+...   {
+...     m_id: 80000000011,
+...     m_content:
+...       "I'm sorry to hear that. Please provide a description of the jewelry.",
+...     m_date: new Date("2023-01-31"),
+...     m_time: "12:15:00",
+...     to_user_id: 12345678909,
+...     from_user_id: 12345678908,
+...     to_admin_id: null,
+...     from_admin_id: null,
 ...   }
 ... ]);
 {
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f16127ab5772976c3b68c0"),
-                ObjectId("64f16127ab5772976c3b68c1"),
-                ObjectId("64f16127ab5772976c3b68c2"),
-                ObjectId("64f16127ab5772976c3b68c3"),
-                ObjectId("64f16127ab5772976c3b68c4"),
-                ObjectId("64f16127ab5772976c3b68c5"),
-                ObjectId("64f16127ab5772976c3b68c6"),
-                ObjectId("64f16127ab5772976c3b68c7"),
-                ObjectId("64f16127ab5772976c3b68c8"),
-                ObjectId("64f16127ab5772976c3b68c9")
-        ]
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481516d97fb1f89e5d14"),
+    '1': ObjectId("64fb481516d97fb1f89e5d15"),
+    '2': ObjectId("64fb481516d97fb1f89e5d16"),
+    '3': ObjectId("64fb481516d97fb1f89e5d17"),
+    '4': ObjectId("64fb481516d97fb1f89e5d18"),
+    '5': ObjectId("64fb481516d97fb1f89e5d19"),
+    '6': ObjectId("64fb481516d97fb1f89e5d1a"),
+    '7': ObjectId("64fb481516d97fb1f89e5d1b"),
+    '8': ObjectId("64fb481516d97fb1f89e5d1c"),
+    '9': ObjectId("64fb481516d97fb1f89e5d1d"),
+    '10': ObjectId("64fb481516d97fb1f89e5d1e")
+  }
 }
+lost_and_found_db>
 
+lost_and_found_db> //SEC")IONS
 
-//CATEGORY
-> db.createCollection("category"); db.category.insertOne({ "cat_id": 50000000001, "cat_name": "Stationary" })
-{
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f161c3ab5772976c3b68d4")
-}
-> db.category.insertMany([
+lost_and_found_db> db.security_qa.insertMany([
 ...   {
-...     "cat_id": 50000000002,
-...     "cat_name": "Electronics"
+...     sqa_question: "What is your mother's maiden name?",
+...     sqa_answer: "Smith",
+...     sqa_r_id: 60000000001,
 ...   },
 ...   {
-...     "cat_id": 50000000003,
-...     "cat_name": "Clothing"
+...     sqa_question: "What is your favorite color?",
+...     sqa_answer: "Blue",
+...     sqa_r_id: 60000000002,
 ...   },
 ...   {
-...     "cat_id": 50000000004,
-...     "cat_name": "Accessories"
+...     sqa_question: "What was the name of your first pet?",
+...     sqa_answer: "Buddy",
+...     sqa_r_id: 60000000003,
 ...   },
 ...   {
-...     "cat_id": 50000000005,
-...     "cat_name": "Books"
+...     sqa_question: "Where were you born?",
+...     sqa_answer: "New York",
+...     sqa_r_id: 60000000004,
 ...   },
 ...   {
-...     "cat_id": 50000000006,
-...     "cat_name": "Jewelry"
+...     sqa_question: "What is the name of your best friend?",
+...     sqa_answer: "Emily",
+...     sqa_r_id: 60000000005,
 ...   },
 ...   {
-...     "cat_id": 50000000007,
-...     "cat_name": "Sports Equipment"
+...     sqa_question: "What is your favorite book?",
+...     sqa_answer: "Harry Potter",
+...     sqa_r_id: 60000000006,
 ...   },
 ...   {
-...     "cat_id": 50000000008,
-...     "cat_name": "Furniture"
+...     sqa_question: "What is the name of your favorite teacher?",
+...     sqa_answer: "Mr. Johnson",
+...     sqa_r_id: 60000000007,
 ...   },
 ...   {
-...     "cat_id": 50000000009,
-...     "cat_name": "Art and Crafts"
+...     sqa_question: "What is your mother's birthplace?",
+...     sqa_answer: "Chicago",
+...     sqa_r_id: 60000000008,
 ...   },
 ...   {
-...     "cat_id": 50000000010,
-...     "cat_name": "Toys"
+...     sqa_question: "What is your favorite food?",
+...     sqa_answer: "Pizza",
+...     sqa_r_id: 60000000009,
 ...   },
 ...   {
-...     "cat_id": 50000000011,
-...     "cat_name": "Personal Documents"
-...   }
+...     sqa_question: "What is the name of your first school?",
+...     sqa_answer: "Maple Elementary",
+...     sqa_r_id: 60000000010,
+...   },
+...   {
+...     sqa_question: "What is your favorite movie?",
+...     sqa_answer: "The Avengers",
+...     sqa_r_id: 60000000011,
+...   },
 ... ]);
 {
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f16182ab5772976c3b68ca"),
-                ObjectId("64f16182ab5772976c3b68cb"),
-                ObjectId("64f16182ab5772976c3b68cc"),
-                ObjectId("64f16182ab5772976c3b68cd"),
-                ObjectId("64f16182ab5772976c3b68ce"),
-                ObjectId("64f16182ab5772976c3b68cf"),
-                ObjectId("64f16182ab5772976c3b68d0"),
-                ObjectId("64f16182ab5772976c3b68d1"),
-                ObjectId("64f16182ab5772976c3b68d2"),
-                ObjectId("64f16182ab5772976c3b68d3")
-        ]
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481516d97fb1f89e5d1f"),
+    '1': ObjectId("64fb481516d97fb1f89e5d20"),
+    '2': ObjectId("64fb481516d97fb1f89e5d21"),
+    '3': ObjectId("64fb481516d97fb1f89e5d22"),
+    '4': ObjectId("64fb481516d97fb1f89e5d23"),
+    '5': ObjectId("64fb481516d97fb1f89e5d24"),
+    '6': ObjectId("64fb481516d97fb1f89e5d25"),
+    '7': ObjectId("64fb481516d97fb1f89e5d26"),
+    '8': ObjectId("64fb481516d97fb1f89e5d27"),
+    '9': ObjectId("64fb481516d97fb1f89e5d28"),
+    '10': ObjectId("64fb481516d97fb1f89e5d29")
+  }
 }
+lost_and_found_db>
 
-//REPORTED ITEM
-db.createCollection("reported_item")
-{ "ok" : 1 }
-> db.reported_item.createIndex({ "category_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 1,
-        "numIndexesAfter" : 2,
-        "ok" : 1
-}
-> db.reported_item.createIndex({ "admin_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 2,
-        "numIndexesAfter" : 3,
-        "ok" : 1
-}
-> db.reported_item.createIndex({ "user_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 3,
-        "numIndexesAfter" : 4,
-        "ok" : 1
-}
-> db.reported_item.insertOne({
-...   "r_id": 60000000001,
-...   "r_name": "Reported Item Name",
-...   "r_location": "Location",
-...   "r_time_of_loss": "12:34:56",
-...   "r_date_of_loss": ISODate("2023-08-31"),
-...   "r_progress": "l",
-...   "r_reported_as": "l",
-...   "r_description": "Description",
-...   "category_id": 50000000002,
-...   "admin_id": null,
-...   "admin_date_reported": ISODate("2023-08-31"),
-...   "user_id": 12345678902,
-...   "user_date_reported": ISODate("2023-08-31")
-... })
+lost_and_found_db> //ANSWERS COLLECTION
 
-//insert multiple records
-db.reported_item.insertMany([
+lost_and_found_db> db.answers.insertMany([
 ...   {
-...     "r_id": 60000000002,
-...     "r_name": "Lost Wallet",
-...     "r_location": "Coffee Shop",
-...     "r_time_of_loss": "15:30:00",
-...     "r_date_of_loss": "2023-08-15T00:00:00Z",
-...     "r_progress": "l",
-...     "r_reported_as": "l",
-...     "r_description": "Black leather wallet",
-...     "category_id": 50000000002,
-...     "admin_id": null,
-...     "user_id": 12345678902,
-...     "user_date_reported": "2023-08-15T00:00:00Z"
+...     ans_veri_status: "v",
+...     ans_question: "Security Question",
+...     ans_r_id: 60000000001,
+...     ans_user_id: 12345678902,
 ...   },
 ...   {
-...     "r_id": 60000000003,
-...     "r_name": "Stolen Phone",
-...     "r_location": "Bus Stop",
-...     "r_time_of_loss": "08:45:00",
-...     "r_date_of_loss": "2023-07-20T00:00:00Z",
-...     "r_progress": "l",
-...     "r_reported_as": "l",
-...     "r_description": "Silver iPhone XS",
-...     "category_id": 50000000001,
-...     "admin_id": 12345678901,
-...     "user_id": null,
-...     "admin_date_reported": "2023-07-20T00:00:00Z"
-...   },
-... { "r_id": 60000000004, "r_name": "Lost Backpack", "r_location": "Library", "r_time_of_loss": "11:20:00", "r_date_of_loss": ISODate("2023-09-05"), "r_progress": "l", "r_reported_as": "l", "r_description": "Blue backpack with books", "category_id": 50000000005, "admin_id": null, "user_id": 12345678904, "user_date_reported": ISODate("2023-09-05") },
-...  { "r_id": 60000000005, "r_name": "Stolen Laptop", "r_location": "Office", "r_time_of_loss": "09:00:00", "r_date_of_loss": ISODate("2023-08-10"), "r_progress": "l", "r_reported_as": "l", "r_description": "Silver MacBook Pro", "category_id": 50000000002,  "admin_id": 12345678901, "user_id": null, "admin_date_reported": ISODate("2023-08-10") },
-...  { "r_id": 60000000006, "r_name": "Lost Jewelry", "r_location": "Restaurant", "r_time_of_loss": "20:15:00", "r_date_of_loss": ISODate("2023-09-20"), "r_progress": "l", "r_reported_as": "l", "r_description": "Gold necklace and earrings", "category_id": 50000000003, "admin_id": null, "user_id": 12345678905, "user_date_reported": ISODate("2023-09-20") },
-...  { "r_id": 60000000007, "r_name": "Stolen Bicycle", "r_location": "Street", "r_time_of_loss": "14:00:00", "r_date_of_loss": ISODate("2023-08-25"), "r_progress": "l", "r_reported_as": "l", "r_description": "Red mountain bike", "category_id": 50000000004,  "admin_id": 12345678901, "user_id": null, "admin_date_reported": ISODate("2023-08-25") },
-... { "r_id": 60000000008, "r_name": "Lost Wallet", "r_location": "Supermarket", "r_time_of_loss": "16:45:00", "r_date_of_loss": ISODate("2023-09-10"), "r_progress": "l", "r_reported_as": "l", "r_description": "Brown leather wallet", "category_id": 50000000001,  "admin_id": null, "user_id": 12345678906, "user_date_reported": ISODate("2023-09-10") },
-... { "r_id": 60000000009, "r_name": "Stolen Watch", "r_location": "Park", "r_time_of_loss": "10:30:00", "r_date_of_loss": ISODate("2023-08-05"), "r_progress": "l", "r_reported_as": "l", "r_description": "Silver wristwatch", "category_id": 50000000003,  "admin_id": 12345678901, "user_id": null, "admin_date_reported": ISODate("2023-08-05") }
-... , { "r_id": 60000000010, "r_name": "Lost Umbrella", "r_location": "Cafe", "r_time_of_loss": "18:00:00", "r_date_of_loss": ISODate("2023-09-15"), "r_progress": "l", "r_reported_as": "l", "r_description": "Black folding umbrella", "category_id": 50000000001, "admin_id": null, "user_id": 12345678907, "user_date_reported": ISODate("2023-09-15") }
-... , { "r_id": 60000000011, "r_name": "Stolen Wallet", "r_location": "Shopping Mall", "r_time_of_loss": "14:15:00", "r_date_of_loss": ISODate("2023-08-15"), "r_progress": "l", "r_reported_as": "l", "r_description": "Black leather wallet", "category_id": 50000000001,  "admin_id": 12345678902, "user_id": null, "admin_date_reported": ISODate("2023-08-15") }]);
-{
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f16386ab5772976c3b68d6"),
-                ObjectId("64f16386ab5772976c3b68d7"),
-                ObjectId("64f16386ab5772976c3b68d8"),
-                ObjectId("64f16386ab5772976c3b68d9"),
-                ObjectId("64f16386ab5772976c3b68da"),
-                ObjectId("64f16386ab5772976c3b68db"),
-                ObjectId("64f16386ab5772976c3b68dc"),
-                ObjectId("64f16386ab5772976c3b68dd"),
-                ObjectId("64f16386ab5772976c3b68de"),
-                ObjectId("64f16386ab5772976c3b68df")
-        ]
-}
-
-//REPORTED_IMAGE
-> db.createCollection("reported_image")
-{ "ok" : 1 }
-> db.reported_image.insertOne({
-...   "r_id":  60000000001,
-...   "r_image": "image_url_here"
-... })
-{
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f163c9ab5772976c3b68e0")
-}
-
-//insert multiple records
-db.reported_image.insertMany([
-...   {
-...     "r_id": 60000000002,
-...     "r_images": [
-...       "image_url_1",
-...       "image_url_2",
-...       "image_url_3"
-...     ]
+...     ans_veri_status: "nv",
+...     ans_question: "What is your favorite color?",
+...     ans_r_id: 60000000002,
+...     ans_user_id: 12345678901,
 ...   },
 ...   {
-...     "r_id": 60000000003,
-...     "r_images": [
-...       "image_url_4",
-...       "image_url_5"
-...     ]
+...     ans_veri_status: "v",
+...     ans_question: "What was the name of your first pet?",
+...     ans_r_id: 60000000003,
+...     ans_user_id: 12345678902,
 ...   },
 ...   {
-...     "r_id": 60000000004,
-...     "r_images": [
-...       "image_url_6"
-...     ]
+...     ans_veri_status: "nv",
+...     ans_question: "Where were you born?",
+...     ans_r_id: 60000000004,
+...     ans_user_id: 12345678903,
 ...   },
 ...   {
-...     "r_id": 60000000005,
-...     "r_images": [
-...       "image_url_7",
-...       "image_url_8"
-...     ]
+...     ans_veri_status: "v",
+...     ans_question: "What is the name of your best friend?",
+...     ans_r_id: 60000000005,
+...     ans_user_id: 12345678904,
 ...   },
 ...   {
-...     "r_id": 60000000006,
-...     "r_images": [
-...       "image_url_9",
-...       "image_url_10"
-...     ]
+...     ans_veri_status: "nv",
+...     ans_question: "What is your favorite book?",
+...     ans_r_id: 60000000006,
+...     ans_user_id: 12345678905,
 ...   },
 ...   {
-...     "r_id": 60000000007,
-...     "r_images": [
-...       "image_url_11",
-...       "image_url_12"
-...     ]
+...     ans_veri_status: "v",
+...     ans_question: "What is the name of your favorite teacher?",
+...     ans_r_id: 60000000007,
+...     ans_user_id: 12345678906,
 ...   },
 ...   {
-...     "r_id": 60000000008,
-...     "r_images": [
-...       "image_url_13"
-...     ]
+...     ans_veri_status: "nv",
+...     ans_question: "What is your mother's birthplace?",
+...     ans_r_id: 60000000008,
+...     ans_user_id: 12345678907,
 ...   },
 ...   {
-...     "r_id": 60000000009,
-...     "r_images": [
-...       "image_url_14"
-...     ]
+...     ans_veri_status: "v",
+...     ans_question: "What is your favorite food?",
+...     ans_r_id: 60000000009,
+...     ans_user_id: 12345678908,
 ...   },
 ...   {
-...     "r_id": 60000000010,
-...     "r_images": [
-...       "image_url_15",
-...       "image_url_16"
-...     ]
+...     ans_veri_status: "nv",
+...     ans_question: "What is the name of your first school?",
+...     ans_r_id: 60000000010,
+...     ans_user_id: 12345678909,
 ...   },
-...   {
-...     "r_id": 60000000011,
-...     "r_images": [
-...       "image_url_17",
-...       "image_url_18",
-...       "image_url_19"
-...     ]
-...   }
 ... ]);
 {
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f1646aab5772976c3b68e1"),
-                ObjectId("64f1646aab5772976c3b68e2"),
-                ObjectId("64f1646aab5772976c3b68e3"),
-                ObjectId("64f1646aab5772976c3b68e4"),
-                ObjectId("64f1646aab5772976c3b68e5"),
-                ObjectId("64f1646aab5772976c3b68e6"),
-                ObjectId("64f1646aab5772976c3b68e7"),
-                ObjectId("64f1646aab5772976c3b68e8"),
-                ObjectId("64f1646aab5772976c3b68e9"),
-                ObjectId("64f1646aab5772976c3b68ea")
-        ]
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64fb481516d97fb1f89e5d2a"),
+    '1': ObjectId("64fb481516d97fb1f89e5d2b"),
+    '2': ObjectId("64fb481516d97fb1f89e5d2c"),
+    '3': ObjectId("64fb481516d97fb1f89e5d2d"),
+    '4': ObjectId("64fb481516d97fb1f89e5d2e"),
+    '5': ObjectId("64fb481516d97fb1f89e5d2f"),
+    '6': ObjectId("64fb481516d97fb1f89e5d30"),
+    '7': ObjectId("64fb481516d97fb1f89e5d31"),
+    '8': ObjectId("64fb481516d97fb1f89e5d32"),
+    '9': ObjectId("64fb481516d97fb1f89e5d33")
+  }
 }
-
-//MESSAGES
-> db.createCollection("messages")
-{ "ok" : 1 }
-> db.messages.createIndex({ "to_user_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 1,
-        "numIndexesAfter" : 2,
-        "ok" : 1
-}
-> db.messages.createIndex({ "from_user_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 2,
-        "numIndexesAfter" : 3,
-        "ok" : 1
-}
-> db.messages.createIndex({ "to_admin_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 3,
-        "numIndexesAfter" : 4,
-        "ok" : 1
-}
-> db.messages.createIndex({ "from_admin_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 4,
-        "numIndexesAfter" : 5,
-        "ok" : 1
-}
-> db.messages.insertOne({
-...   "m_id": 80000000001,
-...   "m_content": "Message content",
-...   "m_date": ISODate("2023-08-31"),
-...   "m_time": "12:34:56",
-...   "to_user_id": 1,
-...   "from_user_id": 1,
-...   "to_admin_id": 1,
-...   "from_admin_id": 1
-... })
-{
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f16505ab5772976c3b68eb")
-}
-
-//Insert Multiple records
-db.messages.insertMany([
-...   {
-...     "m_id": 80000000002,
-...     "m_content": "Hello, I lost my backpack. Can you assist?",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "10:15:00",
-...     "to_user_id": 12345678901,
-...     "from_user_id": 12345678902,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000003,
-...     "m_content": "Of course, I'd be happy to help. Please provide more details about your backpack.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "11:30:00",
-...     "to_user_id": 12345678902,
-...     "from_user_id": 12345678901,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000004,
-...     "m_content": "Hi, I lost my laptop in the office.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "14:20:00",
-...     "to_user_id": 12345678903,
-...     "from_user_id": 12345678905,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000005,
-...     "m_content": "I found your laptop. I'll give it to the admin.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "15:45:00",
-...     "to_user_id": 12345678905,
-...     "from_user_id": 12345678903,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000006,
-...     "m_content": "Hello, I have a question about the lost and found process.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "09:10:00",
-...     "to_user_id": 12345678904,
-...     "from_user_id": 12345678901,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000007,
-...     "m_content": "Absolutely, feel free to ask your question.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "10:30:00",
-...     "to_user_id": 12345678901,
-...     "from_user_id": 12345678904,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000008,
-...     "m_content": "Hi, I lost my bicycle near the gym.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "13:05:00",
-...     "to_user_id": 12345678906,
-...     "from_user_id": 12345678907,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000009,
-...     "m_content": "I'll check if anyone has reported it. I'll let you know.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "14:45:00",
-...     "to_user_id": 12345678907,
-...     "from_user_id": 12345678906,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000010,
-...     "m_content": "Hello, I lost my jewelry in the park.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "11:50:00",
-...     "to_user_id": 12345678908,
-...     "from_user_id": 12345678909,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   },
-...   {
-...     "m_id": 80000000011,
-...     "m_content": "I'm sorry to hear that. Please provide a description of the jewelry.",
-...     "m_date": "2023-08-31T00:00:00Z",
-...     "m_time": "12:15:00",
-...     "to_user_id": 12345678909,
-...     "from_user_id": 12345678908,
-...     "to_admin_id": null,
-...     "from_admin_id": null
-...   }]);
-{
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f16557ab5772976c3b68ec"),
-                ObjectId("64f16557ab5772976c3b68ed"),
-                ObjectId("64f16557ab5772976c3b68ee"),
-                ObjectId("64f16557ab5772976c3b68ef"),
-                ObjectId("64f16557ab5772976c3b68f0"),
-                ObjectId("64f16557ab5772976c3b68f1"),
-                ObjectId("64f16557ab5772976c3b68f2"),
-                ObjectId("64f16557ab5772976c3b68f3"),
-                ObjectId("64f16557ab5772976c3b68f4"),
-                ObjectId("64f16557ab5772976c3b68f5")
-        ]
-}
-
-//SECURITY_QA
-> db.createCollection("security_qa"); db.security_qa.createIndex({ "sqa_r_id": 1 });
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 1,
-        "numIndexesAfter" : 2,
-        "ok" : 1
-}
-> db.security_qa.insertMany([
-...   {
-...     "sqa_question": "What is your favorite color?",
-...     "sqa_answer": "Blue",
-...     "sqa_r_id": 60000000002
-...   },
-...   {
-...     "sqa_question": "What was the name of your first pet?",
-...     "sqa_answer": "Buddy",
-...     "sqa_r_id": 60000000003
-...   },
-...   {
-...     "sqa_question": "Where were you born?",
-...     "sqa_answer": "New York",
-...     "sqa_r_id": 60000000004
-...   },
-...   {
-...     "sqa_question": "What is the name of your best friend?",
-...     "sqa_answer": "Emily",
-...     "sqa_r_id": 60000000005
-...   },
-...   {
-...     "sqa_question": "What is your favorite book?",
-...     "sqa_answer": "Harry Potter",
-...     "sqa_r_id": 60000000006
-...   },
-...   {
-...     "sqa_question": "What is the name of your favorite teacher?",
-...     "sqa_answer": "Mr. Johnson",
-...     "sqa_r_id": 60000000007
-...   },
-...   {
-...     "sqa_question": "What is your mother's birthplace?",
-...     "sqa_answer": "Chicago",
-...     "sqa_r_id": 60000000008
-...   },
-...   {
-...     "sqa_question": "What is your favorite food?",
-...     "sqa_answer": "Pizza",
-...     "sqa_r_id": 60000000009
-...   },
-...   {
-...     "sqa_question": "What is the name of your first school?",
-...     "sqa_answer": "Maple Elementary",
-...     "sqa_r_id": 60000000010
-...   },
-...   {
-...     "sqa_question": "What is your favorite movie?",
-...     "sqa_answer": "The Avengers",
-...     "sqa_r_id": 60000000011
-...   }
-... ]);
-{
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f165d0ab5772976c3b68f6"),
-                ObjectId("64f165d0ab5772976c3b68f7"),
-                ObjectId("64f165d0ab5772976c3b68f8"),
-                ObjectId("64f165d0ab5772976c3b68f9"),
-                ObjectId("64f165d0ab5772976c3b68fa"),
-                ObjectId("64f165d0ab5772976c3b68fb"),
-                ObjectId("64f165d0ab5772976c3b68fc"),
-                ObjectId("64f165d0ab5772976c3b68fd"),
-                ObjectId("64f165d0ab5772976c3b68fe"),
-                ObjectId("64f165d0ab5772976c3b68ff")
-        ]
-}
-
-
-//ANSWERS COLLECTION
-> db.createCollection("answers")
-{ "ok" : 1 }
-> db.answers.createIndex({ "ans_question": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 1,
-        "numIndexesAfter" : 2,
-        "ok" : 1
-}
-> db.answers.createIndex({ "ans_r_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 2,
-        "numIndexesAfter" : 3,
-        "ok" : 1
-}
-> db.answers.createIndex({ "ans_user_id": 1 })
-{
-        "createdCollectionAutomatically" : false,
-        "numIndexesBefore" : 3,
-        "numIndexesAfter" : 4,
-        "ok" : 1
-}
-> db.answers.insertOne({
-...   "ans_veri_status": "v",
-...   "ans_question": "Security Question",
-...   "ans_r_id": 1,
-...   "ans_user_id": 1
-... })
-{
-        "acknowledged" : true,
-        "insertedId" : ObjectId("64f1662bab5772976c3b6900")
-}
->db.answers.insertMany([
-...   {
-...     "ans_veri_status": "p",
-...     "ans_question": "What is your favorite color?",
-...     "ans_r_id": 60000000002,
-...     "ans_user_id": 12345678901
-...   },
-...   {
-...     "ans_veri_status": "v",
-...     "ans_question": "What was the name of your first pet?",
-...     "ans_r_id": 60000000003,
-...     "ans_user_id": 12345678902
-...   },
-...   {
-...     "ans_veri_status": "p",
-...     "ans_question": "Where were you born?",
-...     "ans_r_id": 60000000004,
-...     "ans_user_id": 12345678903
-...   },
-...   {
-...     "ans_veri_status": "v",
-...     "ans_question": "What is the name of your best friend?",
-...     "ans_r_id": 60000000005,
-...     "ans_user_id": 12345678904
-...   },
-...   {
-...     "ans_veri_status": "p",
-...     "ans_question": "What is your favorite book?",
-...     "ans_r_id": 60000000006,
-...     "ans_user_id": 12345678905
-...   },
-...   {
-...     "ans_veri_status": "v",
-...     "ans_question": "What is the name of your favorite teacher?",
-...     "ans_r_id": 60000000007,
-...     "ans_user_id": 12345678906
-...   },
-...   {
-...     "ans_veri_status": "p",
-...     "ans_question": "What is your mother's birthplace?",
-...     "ans_r_id": 60000000008,
-...     "ans_user_id": 12345678907
-...   },
-...   {
-...     "ans_veri_status": "v",
-...     "ans_question": "What is your favorite food?",
-...     "ans_r_id": 60000000009,
-...     "ans_user_id": 12345678908
-...   },
-...   {
-...     "ans_veri_status": "p",
-...     "ans_question": "What is the name of your first school?",
-...     "ans_r_id": 60000000010,
-...     "ans_user_id": 12345678909
-...   }]);
-{
-        "acknowledged" : true,
-        "insertedIds" : [
-                ObjectId("64f16659ab5772976c3b6901"),
-                ObjectId("64f16659ab5772976c3b6902"),
-                ObjectId("64f16659ab5772976c3b6903"),
-                ObjectId("64f16659ab5772976c3b6904"),
-                ObjectId("64f16659ab5772976c3b6905"),
-                ObjectId("64f16659ab5772976c3b6906"),
-                ObjectId("64f16659ab5772976c3b6907"),
-                ObjectId("64f16659ab5772976c3b6908"),
-                ObjectId("64f16659ab5772976c3b6909")
-        ]
-}
-
 
 //FIND()
 
 //LOGICAL OPERATORS
 //1.Find reported items that were lost before "2023-08-31" and belong to the "Electronics" category.
- >db.reported_item.find({$and:[{"r_date_of_loss":{$lt:"31-08-2023"}},{"category_id":50000000002}]});
+ >db.reported_item.find({$and:[{"r_date_of_loss":{$lt:"31-08-2023"}},{"category_id":50000000001}]});
 { "_id" : ObjectId("64f16386ab5772976c3b68d6"), "r_id" : 60000000002, "r_name" : "Lost Wallet", "r_location" : "Coffee Shop", "r_time_of_loss" : "15:30:00", "r_date_of_loss" : "2023-08-15T00:00:00Z", "r_progress" : "l", "r_reported_as" : "l", "r_description" : "Black leather wallet", "category_id" : 50000000002, "admin_id" : null, "user_id" : 12345678902, "user_date_reported" : "2023-08-15T00:00:00Z" }
 
-//2.Find reported items that were lost before "2023-08-31" and are not categorized as "Books".
- >db.reported_item.find({$nor:[{"r_date_of_loss":{$lt:"31-08-2023"}},{"category_id":50000000005}]});
+//2.Find reported items that were lost before "2023-08-31" and are not categorized as "Stationary".
+ >db.reported_item.find({$nor:[{"r_date_of_loss":{$lt:"31-08-2023"}},{"category_id":50000000004}]});
 { "_id" : ObjectId("64f1623dab5772976c3b68d5"), "r_id" : 60000000001, "r_name" : "Reported Item Name", "r_location" : "Location", "r_time_of_loss" : "12:34:56", "r_date_of_loss" : ISODate("2023-08-31T00:00:00Z"), "r_progress" : "l", "r_reported_as" : "l", "r_description" : "Description", "category_id" : 50000000002, "admin_id" : null, "admin_date_reported" : ISODate("2023-08-31T00:00:00Z"), "user_id" : 12345678902, "user_date_reported" : ISODate("2023-08-31T00:00:00Z") }
 { "_id" : ObjectId("64f16386ab5772976c3b68d9"), "r_id" : 60000000005, "r_name" : "Stolen Laptop", "r_location" : "Office", "r_time_of_loss" : "09:00:00", "r_date_of_loss" : ISODate("2023-08-10T00:00:00Z"), "r_progress" : "l", "r_reported_as" : "l", "r_description" : "Silver MacBook Pro", "category_id" : 50000000002, "admin_id" : 12345678901, "user_id" : null, "admin_date_reported" : ISODate("2023-08-10T00:00:00Z") }
 { "_id" : ObjectId("64f16386ab5772976c3b68da"), "r_id" : 60000000006, "r_name" : "Lost Jewelry", "r_location" : "Restaurant", "r_time_of_loss" : "20:15:00", "r_date_of_loss" : ISODate("2023-09-20T00:00:00Z"), "r_progress" : "l", "r_reported_as" : "l", "r_description" : "Gold necklace and earrings", "category_id" : 50000000003, "admin_id" : null, "user_id" : 12345678905, "user_date_reported" : ISODate("2023-09-20T00:00:00Z") }
 
-//COMPARISON OPERATORS
-
-
-//ELEMENT OPERATORS
-
-//AGGREGRATION
-
-//PROJECTORS
 
 //COMPARISON OPERATORS
 //1. Find reported items with a date of loss greater than or equal to "2023-09-01".
@@ -926,22 +930,28 @@ db.messages.insertMany([
 //2.Find the reported items that are with the lost and found department
  db.reported_item.find({"r_progress":{$eq:"wlf"}})
 
-//3.Find messages with no "to_user_id" field.
- db.messages.find({"to_user_field":{$exists:false}})
-
-//4.Find the reported items that are found or with lost and found
+//3.Find the reported items that are found or with lost and found
 db.reported_item.find({"r_progress":{$in:["f","wlf"]}})
 
-//5.Find the reported images that are not an array
-db.reported_image.find({"r_images":{$type:"array"}})
-
-//6 Find Messages sent by admin
+//4. Find Messages sent by admin
 db.messages.find({"from_admin_id":{$ne:null}})
 
-//7. Find the reported items that do not belong to books, electronics or clothing category
- db.reported_item.find({"category_id":{$nin:[50000000002,50000000003,50000000005]}})
+//5. Find the reported items that do not belong to stationary, electronics or clothing category
+ db.reported_item.find({"category_id":{$nin:[50000000004,50000000001,50000000002]}})
 
-//8.Find reported items with a date of loss between "2023-08-15" and "2023-09-15".
+//6. Find reported items with a date of loss between "2023-08-15" and "2023-09-15".
+
+
+//ELEMENT OPERATORS
+//1.Find messages with no "to_user_id" field.
+ db.messages.find({"to_user_field":{$exists:false}})
+
+//2.Find the reported images that are not an array
+db.reported_image.find({"r_images":{$type:"array"}})
+
+//AGGREGRATION
+
+//PROJECTORS
 
 //UPDATE()
 
@@ -969,7 +979,8 @@ lost_and_found_db> db.faq.find()
     faq_question: 'What is this?',
     faq_answer: 'This is the answer.',
     faq_section: ''
-  },
+  }
+]
 
 //3.Remove the user_phone field from the user with control_faculty_id 12345678902.
 >db.users.update({"control_faculty_id":12345678902},{$unset:{"user_phone":""}})
@@ -978,7 +989,6 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 { "_id" : ObjectId("64f15a88ab5772976c3b68af"), "control_faculty_id" : 12345678902, "user_email" : "user3@example.com", "user_fullname" : "Alice Johnson", "user_password" : "hashed_password", "user_type" : "s", "user_account_status" : "s" }
 
 
-//
 //DELETE()
 
 //1.Remove the all the details of the user 12345678905
