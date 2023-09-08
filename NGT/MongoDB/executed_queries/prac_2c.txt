@@ -910,6 +910,30 @@ db.messages.insertMany([
 { "_id" : ObjectId("64f16386ab5772976c3b68da"), "r_id" : 60000000006, "r_name" : "Lost Jewelry", "r_location" : "Restaurant", "r_time_of_loss" : "20:15:00", "r_date_of_loss" : ISODate("2023-09-20T00:00:00Z"), "r_progress" : "l", "r_reported_as" : "l", "r_description" : "Gold necklace and earrings", "category_id" : 50000000003, "admin_id" : null, "user_id" : 12345678905, "user_date_reported" : ISODate("2023-09-20T00:00:00Z") }
 
 
+//COMPARISON OPERATORS
+//1. Find reported items with a date of loss greater than or equal to "2023-09-01".
+ db.reported_item.find({"r_date_of_loss":{$gte:new Date("2023-09-01")}})
+
+//2.Find the reported items that are with the lost and found department
+ db.reported_item.find({"r_progress":{$eq:"wlf"}})
+
+//3.Find messages with no "to_user_id" field.
+ db.messages.find({"to_user_field":{$exists:false}})
+
+//4.Find the reported items that are found or with lost and found
+db.reported_item.find({"r_progress":{$in:["f","wlf"]}})
+
+//5.Find the reported images that are not an array
+db.reported_image.find({"r_images":{$type:"array"}})
+
+//6 Find Messages sent by admin
+db.messages.find({"from_admin_id":{$ne:null}})
+
+//7. Find the reported items that do not belong to books, electronics or clothing category
+ db.reported_item.find({"category_id":{$nin:[50000000002,50000000003,50000000005]}})
+
+//8.Find reported items with a date of loss between "2023-08-15" and "2023-09-15".
+
 //UPDATE()
 
 //1.Update the user_email of the user with control_faculty_id 12345678901 to "newemail@example.com."
