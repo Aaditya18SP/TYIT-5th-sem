@@ -318,3 +318,72 @@ class Game:
 
 g = Game()
 g.play_alpha_beta()
+
+
+'''OUTPUT
+.| .| .| 
+.| .| .| 
+.| .| .| 
+
+Evaluation time: 0.0307083s
+Recommended move: X = 0, Y = 0
+Insert the X coordinate: 0
+Insert the Y coordinate: 0
+X| .| .| 
+.| .| .| 
+.| .| .| 
+
+X| .| .| 
+.| O| .| 
+.| .| .| 
+
+Evaluation time: 0.0s
+Recommended move: X = 0, Y = 1
+Insert the X coordinate: 1
+Insert the Y coordinate: 2
+X| .| .| 
+.| O| X| 
+.| .| .| 
+
+X| O| .| 
+.| O| X| 
+.| .| .| 
+
+Evaluation time: 0.0s
+Recommended move: X = 2, Y = 1
+Insert the X coordinate: 2
+Insert the Y coordinate: 1
+X| O| .| 
+.| O| X| 
+.| X| .| 
+
+X| O| .| 
+.| O| X| 
+O| X| .| 
+
+Evaluation time: 0.0s
+Recommended move: X = 0, Y = 2
+Insert the X coordinate: 0
+Insert the Y coordinate: 2
+X| O| X| 
+.| O| X| 
+O| X| .| 
+
+X| O| X| 
+.| O| X| 
+O| X| O| 
+
+Evaluation time: 0.0s
+Recommended move: X = 1, Y = 0
+Insert the X coordinate: 1
+Insert the Y coordinate: 0
+X| O| X| 
+X| O| X| 
+O| X| O| 
+
+It's a tie!
+
+
+
+'''
+

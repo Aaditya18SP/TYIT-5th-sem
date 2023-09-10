@@ -46,4 +46,12 @@ def Nqueens(k):
                 Nqueens(k+1)
 
 Nqueens(1)
-        
+
+'''OUTPUT
+
+2413
+_________
+3142
+
+
+'''

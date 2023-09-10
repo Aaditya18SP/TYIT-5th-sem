@@ -90,5 +90,62 @@ elif(Game==Win):
     else:
         print("XYZ Won") 
 
+'''OUTPUT
+Tic-Tac-Toe Game
+ABC [X] --- XYZ [O]
+
+
+
+Please Wait...
+   |   |   
+___|___|___
+   |   |   
+___|___|___
+   |   |   
+   |   |
+ABC's chance
+Enter the position between [1-9] where you want to mark :1
+ X |   |   
+___|___|___
+   |   |   
+___|___|___
+   |   |   
+   |   |
+XYZ's chance
+Enter the position between [1-9] where you want to mark :2
+ X | O |   
+___|___|___
+   |   |   
+___|___|___
+   |   |   
+   |   |
+ABC's chance
+Enter the position between [1-9] where you want to mark :4
+ X | O |   
+___|___|___
+ X |   |   
+___|___|___
+   |   |   
+   |   |
+XYZ's chance
+Enter the position between [1-9] where you want to mark :5
+ X | O |   
+___|___|___
+ X | O |   
+___|___|___
+   |   |   
+   |   |
+ABC's chance
+Enter the position between [1-9] where you want to mark :7
+ X | O |   
+___|___|___
+ X | O |   
+___|___|___
+ X |   |   
+   |   |
+ABC Won
+
+
+'''
 
 
