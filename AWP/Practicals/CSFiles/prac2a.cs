@@ -140,18 +140,4 @@ The amount in Rupees is:INR 1902.56002807617
  Select your choice:5
 Enter the amount in Rupees:2344
 The amount in Dollars is:$28.3365566417974
-1.Find Factorial
- 2.Convert Fahrenheit to Celsius
- 3.Convert Celsius to Fahrenheit
- 4.Convert Dollars to Rupees
- 5.Convert Rupees to Dollars
- 0.Exit
- Select your choice:0
-
-
-
-
-
-
-
 */

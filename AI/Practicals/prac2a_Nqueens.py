@@ -32,13 +32,16 @@ def Nqueens(k):
             if k == n:
                
                 for j in x:
-                    print(x[j],end='')
-                    '''for k in range(1,n+1):
-                        if(k==x[j]):
-                            print('Q',end='')
+                    #print(x[j],end='')
+                    for k in range(1,n+1):
+                        if (k==x[j]):
+                            print ('|Q|',end='')
                         else:
-                            print('.',end='')
-                            print()'''
+                            print('|.|',end='')
+                    print()
+                print()
+                print('------')
+                    
                 print()
                 print('_________')
            
@@ -53,5 +56,22 @@ Nqueens(1)
 _________
 3142
 
+
+|.||Q||.||.|
+|.||.||.||Q|
+|Q||.||.||.|
+|.||.||Q||.|
+
+------
+
+_________
+|.||.||Q||.|
+|Q||.||.||.|
+|.||.||.||Q|
+|.||Q||.||.|
+
+------
+
+_________
 
 '''
