@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad> 
+    <!--The image when the advertisement is displayed-->
+    <!--Dont leave any space between the opening and closing tags-->
+    <ImageUrl>https://img.freepik.com/free-photo/blue-black-muscle-car-with-license-plate-that-says-trans-front_1340-23399.jpg?w=2000</ImageUrl>
+
+    <!--The URL to navigate to when clicked on it-->
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+
+    <!--The text to display in the ad-->
+    <AlternateText>
+      Presenting the Ultimate Pagani Zonda! 
+    </AlternateText>
+
+    <!--	The number indicating how often an advertisement will appear.-->
+    <Impressions>
+20
+    </Impressions>
+
+    <!--Keyword identifying a group of advertisements. This is used for filtering.-->
+    <Keyword>
+      pagani_cars
+    </Keyword>
+
+    <!--The height of the ad-->
+    <Height>
+      400px
+    </Height>
+
+    <!--the width of the ad-->
+    <Width>
+      50%
+    </Width>
+    
+  </Ad>
+
+<!--AD2-->
+
+  <Ad>
+    <Keyword>
+      pagani_cars
+    </Keyword>
+
+    <ImageUrl>zondaa.jpg</ImageUrl>
+      <!--https://img.freepik.com/free-photo/sports-car-races-through-dark-blurred-motion-generative-ai_188544-12490.jpg?size=626-->
+    <Impressions>
+      50
+    </Impressions>
+
+    <Height>
+      400px
+    </Height>
+    
+    <Width>
+      50%
+    </Width>
+
+    <NavigateUrl>https://www.youtube.com</NavigateUrl>
+    
+  </Ad>
+  
+  <!--AD3-->
+  <Ad>
+    <ImageUrl></ImageUrl>
+    <NavigateUrl>https://www.youtube.com</NavigateUrl>
+  </Ad>
+ 
+</Advertisements>
+
+
+
+
+

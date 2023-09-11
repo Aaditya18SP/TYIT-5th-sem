@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <!--
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+    -->
+    <Keyword>pagani</Keyword>
+    <Impressions>50</Impressions>
+    <ImageUrl>~/App_GlobalResources/shoes.jpg</ImageUrl>
+    
+  </Ad>
+</Advertisements>
