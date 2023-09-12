@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/images/vertical_ad1.jpg</ImageUrl>
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+    <Keyword>vertical ads</Keyword>
+    <Impressions>1</Impressions>
+    <AlternateText></AlternateText>
+    
+  </Ad>
+
+
+  <Ad>
+    <ImageUrl>~/images/vertical_ad2.jpg</ImageUrl>
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+    <Keyword>vertical ads</Keyword>
+    <Impressions>1</Impressions>
+    
+  </Ad>
+
+
+  <Ad>
+    <ImageUrl>~/images/vertical_ad3.jpg</ImageUrl>
+    <NavigateUrl>https://www.google.com</NavigateUrl>
+    <Keyword>vertical ads</Keyword>
+    <Impressions>1</Impressions>
+   
+  </Ad>
+  
+</Advertisements>

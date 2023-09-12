@@ -9,52 +9,33 @@
     <NavigateUrl>https://www.google.com</NavigateUrl>
 
     <!--The text to display in the ad-->
-    <AlternateText>
-      Presenting the Ultimate Pagani Zonda! 
-    </AlternateText>
+    <AlternateText>Presenting the Ultimate Pagani Zonda!</AlternateText>
 
     <!--	The number indicating how often an advertisement will appear.-->
-    <Impressions>
-20
-    </Impressions>
+    <Impressions>1</Impressions>
 
     <!--Keyword identifying a group of advertisements. This is used for filtering.-->
-    <Keyword>
-      pagani_cars
-    </Keyword>
+    <Keyword>pagani_ads</Keyword>
 
     <!--The height of the ad-->
-    <Height>
-      400px
-    </Height>
+    <Height>150px</Height>
 
     <!--the width of the ad-->
-    <Width>
-      50%
-    </Width>
+    <Width>100%</Width>
     
   </Ad>
 
 <!--AD2-->
 
   <Ad>
-    <Keyword>
-      pagani_cars
-    </Keyword>
+    <Keyword>cokead</Keyword>
 
-    <ImageUrl>zondaa.jpg</ImageUrl>
-      <!--https://img.freepik.com/free-photo/sports-car-races-through-dark-blurred-motion-generative-ai_188544-12490.jpg?size=626-->
-    <Impressions>
-      50
-    </Impressions>
+    <ImageUrl>~/images/ad1.jpg</ImageUrl>
+    <Impressions>1</Impressions>
 
-    <Height>
-      400px
-    </Height>
+    <Height>150px</Height>
     
-    <Width>
-      50%
-    </Width>
+    <Width>100%</Width>
 
     <NavigateUrl>https://www.youtube.com</NavigateUrl>
     
@@ -62,8 +43,13 @@
   
   <!--AD3-->
   <Ad>
-    <ImageUrl></ImageUrl>
+    <ImageUrl>~/images/ad2.jpg</ImageUrl>
     <NavigateUrl>https://www.youtube.com</NavigateUrl>
+    <Keyword>cokead</Keyword>
+    <Impressions>1</Impressions>
+    <Height>150px</Height>
+    <Width>100%</Width>
+    
   </Ad>
  
 </Advertisements>
