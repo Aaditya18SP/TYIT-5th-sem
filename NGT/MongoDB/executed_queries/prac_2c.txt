@@ -949,7 +949,18 @@ db.reported_item.find({$or:[{"r_date_of_loss": {$lte:new Date("2023-08-15")}}, {
 //2.Find the reported images that are not an array
 db.reported_image.find({"r_images":{$type:"array"}})
 
-//AGGREGRATION
+//AGGREGRATION	
+//Questions
+1.Find the total number of reported items that belong to the category “Electronics” and have a status of “Lost”.
+2Find the first 10 users who have reported items and sort them by their registration date in ascending order.
+3.Find the number of messages sent by each user and sort them in descending order.
+4.Find the reported items that have been viewed more than 100 times and sort them by their view count in descending order.
+5.Find the security questions that have been answered incorrectly more than 3 times and sort them by the number of incorrect answers in descending order.
+6.Find the total number of reported items that belong to the category “Electronics” and have a status of “Lost”.
+7.Find the first 10 users who have reported items and sort them by their registration date in ascending order.
+8.Find the number of messages sent by each user and sort them in descending order.
+9.Find the reported items that have been viewed more than 100 times and sort them by their view count in descending order.
+10.Find the security questions that have been answered incorrectly more than 3 times and sort them by the number of incorrect answers in descending order.
 
 //PROJECTORS
 
