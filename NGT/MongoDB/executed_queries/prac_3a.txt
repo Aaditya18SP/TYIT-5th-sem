@@ -1,0 +1,57 @@
+//use the mongodb  in program files
+//open the cmds as administrator
+//mongoimport should run on a separate cmd
+
+
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection users --file C:\TYIT(Aaditya_A029)\json_data\new_users.json --jsonArray
+2023-09-15T08:55:14.336+0530    connected to: localhost
+2023-09-15T08:55:14.464+0530    imported 10 documents
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection user_device_details --type json --file C:\TYIT(Aaditya_A029)\json_data\user_device_details.json --jsonArray
+2023-09-15T08:55:37.693+0530    connected to: localhost
+2023-09-15T08:55:37.852+0530    imported 5 documents
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection answers --type json --file C:\TYIT(Aaditya_A029)\json_data\answers.json --jsonArray
+2023-09-15T08:55:59.772+0530    connected to: localhost
+2023-09-15T08:55:59.833+0530    imported 10 documents
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection category --type json --file C:\TYIT(Aaditya_A029)\json_data\category.json --jsonArray
+2023-09-15T08:56:34.199+0530    connected to: localhost
+2023-09-15T08:56:34.211+0530    imported 6 documents
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection faq --type json --file C:\TYIT(Aaditya_A029)\json_data\faq.json --jsonArray
+2023-09-15T08:58:04.328+0530    connected to: localhost
+2023-09-15T08:58:04.345+0530    imported 11 documents
+
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection reported_image --type json --file C:\TYIT(Aaditya_A029)\json_data\reported_images.json --jsonArray
+2023-09-15T08:59:19.355+0530    connected to: localhost
+2023-09-15T08:59:19.383+0530    imported 11 documents
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection security_qa --type json --file C:\TYIT(Aaditya_A029)\json_data\security_questions.json --jsonArray
+2023-09-15T09:00:00.133+0530    connected to: localhost
+2023-09-15T09:00:00.150+0530    imported 11 documents
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection admin_users --type json --file C:\TYIT(Aaditya_A029)\json_data\admin.json
+2023-09-15T09:00:22.117+0530    connected to: localhost
+2023-09-15T09:00:22.133+0530    imported 1 document
+
+//Reported items JSON file that contains a new Date() object
+//The date should be in a valid ISODate format which is :- new Date("2023-08-18T00:00:) 
+//in the date format the letters 'T' and 'Z' are present
+
+C:\Program Files\MongoDB\Server\3.6\bin>C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection reported_item --type json --file C:\TYIT(Aaditya_A029)\json_data\reported_item_new.json --jsonArray
+2023-09-15T09:46:59.728+0530    connected to: localhost
+2023-09-15T09:46:59.749+0530    imported 11 documents
+
+
+//Messages JSON file that contains a new Date() object
+//The date should be in a valid ISODate format which is :- new Date("2023-08-18T00:00:) 
+//in the date format the letters 'T' and 'Z' are present
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_new --collection messages --type json --file C:\TYIT(Aaditya_A029)\json_data\messages.json --jsonArray
+2023-09-15T09:41:18.048+0530    connected to: localhost
+2023-09-15T09:41:18.054+0530    imported 11 documents
+
+

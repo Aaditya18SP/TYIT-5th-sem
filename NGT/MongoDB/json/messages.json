@@ -2,7 +2,7 @@
   {
     "m_id": 80000000001,
     "m_content": "Message content",
-    "m_date": new Date("2023-08-12"),
+    "m_date": new Date("2023-08-12T00:00:00Z"),
     "m_time": "12:34:56",
     "to_user_id": 12345678904,
     "from_user_id": null,
@@ -12,7 +12,7 @@
   {
     "m_id": 80000000002,
     "m_content": "Hello, I lost my backpack. Can you assist?",
-    "m_date": new Date("2023-08-29"),
+    "m_date": new Date("2023-08-29T00:00:00Z"),
     "m_time": "10:15:00",
     "to_user_id": 12345678901,
     "from_user_id": 12345678902,
@@ -22,7 +22,7 @@
   {
     "m_id": 80000000003,
     "m_content": "Of course, I'd be happy to help. Please provide more details about your backpack.",
-    "m_date": new Date("2023-08-30"),
+    "m_date": new Date("2023-08-30T00:00:00Z"),
     "m_time": "11:30:00",
     "to_user_id": 12345678902,
     "from_user_id": 12345678901,
@@ -32,7 +32,7 @@
   {
     "m_id": 80000000004,
     "m_content": "Hi, I lost my laptop in the office.",
-    "m_date": new Date("2023-08-02"),
+    "m_date": new Date("2023-08-02T00:00:00Z"),
     "m_time": "14:20:00",
     "to_user_id": 12345678903,
     "from_user_id": 12345678905,
@@ -42,7 +42,7 @@
   {
     "m_id": 80000000005,
     "m_content": "I found your laptop. I'll give it to the admin.",
-    "m_date": new Date("2023-08-14"),
+    "m_date": new Date("2023-08-14T00:00:00Z"),
     "m_time": "15:45:00",
     "to_user_id": 12345678905,
     "from_user_id": 12345678903,
@@ -52,7 +52,7 @@
   {
     "m_id": 80000000006,
     "m_content": "Hello, I have a question about the lost and found process.",
-    "m_date": new Date("2023-08-08"),
+    "m_date": new Date("2023-08-08T00:00:00Z"),
     "m_time": "09:10:00",
     "to_user_id": 12345678904,
     "from_user_id": 12345678901,
@@ -62,7 +62,7 @@
   {
     "m_id": 80000000007,
     "m_content": "Absolutely, feel free to ask your question.",
-    "m_date": new Date("2023-08-18"),
+    "m_date": new Date("2023-08-18T00:00:00Z"),
     "m_time": "10:30:00",
     "to_user_id": 12345678901,
     "from_user_id": 12345678904,
@@ -72,7 +72,7 @@
   {
     "m_id": 80000000008,
     "m_content": "Hi, I lost my bicycle near the gym.",
-    "m_date": new Date("2023-08-14"),
+    "m_date": new Date("2023-08-14T00:00:00Z"),
     "m_time": "13:05:00",
     "to_user_id": 12345678906,
     "from_user_id": 12345678907,
@@ -82,7 +82,7 @@
   {
     "m_id": 80000000009,
     "m_content": "I'll check if anyone has reported it. I'll let you know.",
-    "m_date": new Date("2023-04-31"),
+    "m_date": new Date("2023-04-30T00:00:00Z"),
     "m_time": "14:45:00",
     "to_user_id": 12345678907,
     "from_user_id": 12345678906,
@@ -92,7 +92,7 @@
   {
     "m_id": 80000000010,
     "m_content": "Hello, I lost my jewelry in the park.",
-    "m_date": new Date("2023-06-24"),
+    "m_date": new Date("2023-06-24T00:00:00Z"),
     "m_time": "11:50:00",
     "to_user_id": 12345678908,
     "from_user_id": 12345678909,
@@ -102,7 +102,7 @@
   {
     "m_id": 80000000011,
     "m_content": "I'm sorry to hear that. Please provide a description of the jewelry.",
-    "m_date": new Date("2023-01-31"),
+    "m_date": new Date("2023-01-31T00:00:00Z"),
     "m_time": "12:15:00",
     "to_user_id": 12345678909,
     "from_user_id": 12345678908,

@@ -1,0 +1,17 @@
+//MongoExport
+
+//--out  specifies the file to export to. IMP: The file name shouldn't contain any spaces eg:exported files (not valid) , exported_files(valid)
+
+//--fields -> specifies the fields to be present in the export file. IMP: Should be enclosed within double quotes
+
+//type -> specifies the type of the file
+
+//--query ->specifies the query to be executed.IMP: i. should be valid JSON. ii.should be enclosed within double quotes and inner fields and values should be enclosed within single quotes or escaped with \".
+
+//--pretty -> beautifies the output
+
+//jsonArray -> The output file is a json array rather than a object
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoexport --db lost_and_found_new --collection users --fields "control_faculty_id,user_email,user_fullname,user_phone,user_password" --type json --out C:\TYIT(Aaditya_A029)\json_data\exported_files\exported_users_using_query.json --query "{'user_type':'s'}" --pretty --jsonArray
+2023-09-15T10:06:40.067+0530    connected to: localhost
+2023-09-15T10:06:40.088+0530    exported 5 records
