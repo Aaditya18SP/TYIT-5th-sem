@@ -1,0 +1,62 @@
+[
+  {
+    "ans_veri_status": "v",
+    "ans_question": "Security Question",
+    "ans_r_id": 60000000001,
+    "ans_user_id": 12345678902
+  },
+  {
+    "ans_veri_status": "nv",
+    "ans_question": "What is your favorite color?",
+    "ans_r_id": 60000000002,
+    "ans_user_id": 12345678901
+  },
+  {
+    "ans_veri_status": "v",
+    "ans_question": "What was the name of your first pet?",
+    "ans_r_id": 60000000003,
+    "ans_user_id": 12345678902
+  },
+  {
+    "ans_veri_status": "nv",
+    "ans_question": "Where were you born?",
+    "ans_r_id": 60000000004,
+    "ans_user_id": 12345678903
+  },
+  {
+    "ans_veri_status": "v",
+    "ans_question": "What is the name of your best friend?",
+    "ans_r_id": 60000000005,
+    "ans_user_id": 12345678904
+  },
+  {
+    "ans_veri_status": "nv",
+    "ans_question": "What is your favorite book?",
+    "ans_r_id": 60000000006,
+    "ans_user_id": 12345678905
+  },
+  {
+    "ans_veri_status": "v",
+    "ans_question": "What is the name of your favorite teacher?",
+    "ans_r_id": 60000000007,
+    "ans_user_id": 12345678906
+  },
+  {
+    "ans_veri_status": "nv",
+    "ans_question": "What is your mother's birthplace?",
+    "ans_r_id": 60000000008,
+    "ans_user_id": 12345678907
+  },
+  {
+    "ans_veri_status": "v",
+    "ans_question": "What is your favorite food?",
+    "ans_r_id": 60000000009,
+    "ans_user_id": 12345678908
+  },
+  {
+    "ans_veri_status": "nv",
+    "ans_question": "What is the name of your first school?",
+    "ans_r_id": 60000000010,
+    "ans_user_id": 12345678909
+  }
+]

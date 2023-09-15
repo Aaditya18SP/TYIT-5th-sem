@@ -1,0 +1,9 @@
+//use the mongodb  in program files
+//open the cmds as administrator
+//mongoimport should run on a separate cmd
+
+
+
+C:\Program Files\MongoDB\Server\3.6\bin>mongoimport --host localhost --db lost_and_found_db --collection new_users --file C:\TYIT(Aaditya_A029)\json_data\new_users.json --jsonArray
+2023-09-15T08:16:31.732+0530    connected to: localhost
+2023-09-15T08:16:31.858+0530    imported 10 documents

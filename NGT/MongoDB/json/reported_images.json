@@ -1,71 +1,46 @@
 [
   {
+    "r_id": 60000000001,
+    "r_image": "image_url_here"
+  },
+  {
     "r_id": 60000000002,
-    "r_images": [
-      "image_url_1",
-      "image_url_2",
-      "image_url_3"
-    ]
+    "r_images": ["image_url_1", "image_url_2", "image_url_3"]
   },
   {
     "r_id": 60000000003,
-    "r_images": [
-      "image_url_4",
-      "image_url_5"
-    ]
+    "r_images": ["image_url_4", "image_url_5"]
   },
   {
     "r_id": 60000000004,
-    "r_images": [
-      "image_url_6"
-    ]
+    "r_images": ["image_url_6"]
   },
   {
     "r_id": 60000000005,
-    "r_images": [
-      "image_url_7",
-      "image_url_8"
-    ]
+    "r_images": ["image_url_7", "image_url_8"]
   },
   {
     "r_id": 60000000006,
-    "r_images": [
-      "image_url_9",
-      "image_url_10"
-    ]
+    "r_images": ["image_url_9", "image_url_10"]
   },
   {
     "r_id": 60000000007,
-    "r_images": [
-      "image_url_11",
-      "image_url_12"
-    ]
+    "r_images": ["image_url_11", "image_url_12"]
   },
   {
     "r_id": 60000000008,
-    "r_images": [
-      "image_url_13"
-    ]
+    "r_images": ["image_url_13"]
   },
   {
     "r_id": 60000000009,
-    "r_images": [
-      "image_url_14"
-    ]
+    "r_images": ["image_url_14"]
   },
   {
     "r_id": 60000000010,
-    "r_images": [
-      "image_url_15",
-      "image_url_16"
-    ]
+    "r_images": ["image_url_15", "image_url_16"]
   },
   {
     "r_id": 60000000011,
-    "r_images": [
-      "image_url_17",
-      "image_url_18",
-      "image_url_19"
-    ]
+    "r_images": ["image_url_17", "image_url_18", "image_url_19"]
   }
 ]

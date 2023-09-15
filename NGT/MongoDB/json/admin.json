@@ -1,0 +1,7 @@
+{
+  "admin_id": 20000000001,
+  "admin_email": "admin@example.com",
+  "admin_phone": "9876543210",
+  "admin_fullname": "Admin Name",
+  "admin_password": "hashed_password"
+}
