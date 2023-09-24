@@ -19,8 +19,9 @@
     <asp:Label ID="lbForName" runat="server" ForeColor="Black" Text="Name"></asp:Label>
     <br />
     <asp:TextBox ID="tbName" runat="server" Width="25%" 
-        ontextchanged="tbName_TextChanged"></asp:TextBox>
+       ></asp:TextBox>
     <br />
+
     <asp:RequiredFieldValidator ControlToValidate="tbName" ErrorMessage="This is a required field" Display="Dynamic" ForeColor="Red" runat="server"></asp:RequiredFieldValidator>
 
     <br />
@@ -40,7 +41,7 @@
      <br />
     <asp:TextBox ID="tbPhone" runat="server" Width="25%" MaxLength="10"></asp:TextBox>
     <br />
-     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbEmail" ValidationExpression="\d{10}" Display="Dynamic" ErrorMessage="Enter a valid Phone number" ForeColor="Red"></asp:RegularExpressionValidator>
+     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbPhone" ValidationExpression="\d{10}" Display="Dynamic" ErrorMessage="Enter a valid Phone number" ForeColor="Red"></asp:RegularExpressionValidator>
      <br />
     <br />
 
@@ -49,19 +50,31 @@
      <br />
      <asp:TextBox ID="tbAge" runat="server" Width="25%" TextMode="Number" ></asp:TextBox>
      <br />
-     <asp:RangeValidator ControlToValidate="tbAge" Display="Dynamic" Type="Integer" MaximumValue="100" MinimumValue="10" ErrorMessage="Please enter a valid between 10 to 100 years" runat="server" ForeColor="Red" ></asp:RangeValidator>
+     <asp:RangeValidator ControlToValidate="tbAge" Display="Dynamic" Type="Integer" 
+        MaximumValue="100" MinimumValue="10" 
+        ErrorMessage="Please enter a valid between 10 to 100 years" runat="server" 
+        ForeColor="Red" ValidationGroup="vg" ></asp:RangeValidator>
       <br />
     <br />
 
     <!-- Password-->
     <asp:Label ID="lbForPassword" runat="server" ForeColor="Black" Text="Password"></asp:Label>
      <br />
-    <asp:TextBox ID="tbPassword" runat="server" Width="25%" TextMode="Password"></asp:TextBox>
+    <asp:TextBox ID="tbPassword" runat="server" Width="25%" TextMode="Password" ></asp:TextBox>
     <br />
+
+    <!--Using javascript functions-->
+    <!--
     <asp:CustomValidator ID="cvalPassword" ControlToValidate="tbPassword" Display="Dynamic" 
         ClientValidationFunction="validatePassword"  runat="server" 
-        ErrorMessage="Enter a valid password" onservervalidate="cvalPassword_ServerValidate" 
+        ErrorMessage="Enter a valid password" ValidationGroup="vg"  
         ></asp:CustomValidator>
+        -->
+
+        <!--using server validation-->
+        
+         <asp:CustomValidator ID="cvalPasswordServer"  Display="Dynamic" runat="server" ErrorMessage="Enter a valid password" OnServerValidate="cvalPassword_ServerValidate"></asp:CustomValidator>
+
      <br />
     <br />
 
@@ -71,7 +84,9 @@
     <asp:TextBox ID="tbConfirmPassword" runat="server" Width="25%" 
         TextMode="Password" ></asp:TextBox>
      <br />
-     <asp:CompareValidator runat="server" ControlToValidate="tbConfirmPassword" ControlToCompare="tbPassword" ErrorMessage="The passwords dont match" Operator="Equal" Type="String" ></asp:CompareValidator> <!--ValueToCompare= ""-->
+     <asp:CompareValidator runat="server" ControlToValidate="tbConfirmPassword" 
+        ControlToCompare="tbPassword" ErrorMessage="The passwords dont match" 
+        Operator="Equal" Type="String" ValidationGroup="vg" ></asp:CompareValidator> <!--ValueToCompare= ""-->
      <br />
 
     <br />
@@ -80,19 +95,13 @@
     <!--Submit Button-->
     <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
     
+    <br />
+    <br />
+
+    <asp:HyperLink runat="server" NavigateUrl="~/Default2.aspx" Text="go to page 2"/>
    
     </form>
 
-    <script type="text/javascript">
-        function validatePassword(source, arguments) {
-        var regex=S+[a-zA-Z0-9][8];
-        if (arguments.Value.matches(regex)) {
-            arguments.IsValid = true;
-        }
-        else {
-            arguments.IsValid = false;
-        }
-        }
-    </script>
+    
 </body>
 </html>

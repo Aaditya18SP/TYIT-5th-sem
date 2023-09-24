@@ -1,0 +1,17 @@
+﻿body {
+}
+#nav
+{
+    background-color:#000033;
+}
+#navbar_items
+{
+    list-style-type:none;
+    display:inline-block;
+    
+}
+
+.navbar_list
+{
+    text-decoration:none;
+}

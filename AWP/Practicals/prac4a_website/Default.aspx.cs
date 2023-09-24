@@ -12,26 +12,21 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
-    protected void tbName_TextChanged(object sender, EventArgs e)
-    {
 
-    }
-   
- 
+
     protected void cvalPassword_ServerValidate(object source, ServerValidateEventArgs args)
     {
-        string entered_password = tbPassword.Text;
-        string reg_ex = "\\S+[a-zA-Z0-9][8]";
-        Regex re = new Regex(reg_ex);
-        if (re.IsMatch(entered_password))
+        var entered_value = tbPassword.Text;
+        lbForPassword.Text = entered_value.ToString();
+        if (entered_value.Contains("a"))
         {
-            cvalPassword.IsValid = true;
-            lbForConfirmPassword.Text = "Valid Password";
+            args.IsValid = true;
         }
         else
         {
-            cvalPassword.IsValid = true;
+            args.IsValid = false;
         }
+
+
     }
-    
 }
