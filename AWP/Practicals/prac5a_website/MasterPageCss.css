@@ -2,16 +2,63 @@
 }
 #nav
 {
-    background-color:#000033;
+    /*mix-blend-mode:color-burn; this is used to remove the white bg from an image */
+    display:flex;
+    align-items: end;
+    justify-content: space-between;
 }
 #navbar_items
 {
     list-style-type:none;
-    display:inline-block;
-    
+    border-color:red;
+    position:absolute;
+    right:20px; 
 }
 
 .navbar_list
 {
+    display:inline-block;
+    align-items:end;
+}
+
+.navbar_links
+{
+    
+    border-color:White;
     text-decoration:none;
+}
+#footer
+{
+    position:fixed;
+    bottom:0;
+    display:flex;
+    width:100%;
+    
+    left:-4px;
+    align-items:center;
+    background:#000033;
+}
+
+.contact_us_div
+{
+    display:flex;
+    float:right;
+    margin-left: 36em;
+    align-items:flex-start;
+    flex-direction:column;
+    color:White;
+    
+    
+}
+
+.contact_us_div p 
+{
+    margin:0px;
+    
+}
+.contact_us_div p a
+{
+    text-decoration:none;
+    
+    
 }

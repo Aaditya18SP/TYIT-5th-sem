@@ -13,7 +13,7 @@
 <!--Header-->
 <div id="nav">
 
-<img src="/logo.svg" alt="logo"/>
+<asp:image ImageUrl="~/Images/logo_jpg.jpg" runat="server" style="float:left;height:50%;width:20%;" />
 <ul id="navbar_items">
 <li class="navbar_list"> <a href="Home.aspx" class="navbar_links">Home</a></li>
 <li class="navbar_list"><a href="AllCars.aspx" class="navbar_links">Our Range</a></li>
@@ -30,11 +30,16 @@
     </div>
 
 <!--Footer-->
-<div>
+<div id="footer">
 <asp:SiteMapDataSource ShowStartingNode="false"  runat="server" ID="SiteMapDataSource" />
 
-<asp:TreeView runat="server" ID="tvSiteMap" DataSourceID="SiteMapDataSource" />
-
+<asp:TreeView runat="server" ID="tvSiteMap" ForeColor="white" DataSourceID="SiteMapDataSource" style="margin:0px" />
+ 
+ <div class="contact_us_div">
+ <p> <b>Contact details</b></p>
+ <p>Phone:1234567890</p>
+ <p>Email:<a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
+ </div>
 </div>
 <!---->
     </form>
