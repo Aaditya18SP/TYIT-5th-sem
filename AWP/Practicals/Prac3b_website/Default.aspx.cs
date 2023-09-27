@@ -18,12 +18,14 @@ public partial class _Default : System.Web.UI.Page
         tb_calDetails.Text = "";
         tb_calDetails.TextMode = System.Web.UI.WebControls.TextBoxMode.MultiLine;
 
-        //get the selected dats
+        //get the selected dates
         foreach (DateTime dt in calNew.SelectedDates)
         {
             tb_calDetails.Text += dt.ToString();
+           
 
         }
+
 
 
         //difference between two dates
@@ -39,7 +41,25 @@ public partial class _Default : System.Web.UI.Page
     protected void calNew_DayRender(object sender, DayRenderEventArgs e)
     {
 
+        //Display messages in calendar control
+        if(e.Day.Date.Equals(DateTime.Parse("18/08/2023")))
+        {
+            Label msg = new Label();
+            msg.Text = "<br/>My birthday!";
+            e.Cell.Controls.Add(msg);
+            e.Cell.BackColor = System.Drawing.Color.Blue;
+            e.Cell.ForeColor = System.Drawing.Color.White;
 
+        }
+
+        //style the selected dates
+
+        if (e.Day.IsSelected)
+        {
+            e.Cell.BackColor = System.Drawing.Color.Green;
+        }
+
+        //Vacations
         //Marking these days as holidays for every year
         ArrayList perma_holidays = new ArrayList();
         perma_holidays.Add("26/1/Republic Day");
@@ -73,18 +93,18 @@ public partial class _Default : System.Web.UI.Page
         {
             if (e.Day.Date.Equals(DateTime.Parse(current_holiday.Key)))
             {
-                e.Cell.BackColor = System.Drawing.Color.SkyBlue;
+                
                 if (e.Day.Date.Equals(DateTime.Parse("19/09/2023")))
                 {
-                    //Ganesh chaturthi festival
+                    //Ganesh chaturthi festival is for 5 days
                     DateTime ganesh_chaturthi_end_date = e.Day.Date.AddDays(5);
                     calNew.SelectedDates.SelectRange(e.Day.Date, ganesh_chaturthi_end_date);
-
-                    Label lbHolidayName = new Label();
-                    lbHolidayName.Text = "<br/>" + current_holiday.Value;
-                    e.Cell.Controls.Add(lbHolidayName);
-
                 }
+
+                e.Cell.BackColor = System.Drawing.Color.SkyBlue;
+                Label lbHolidayName = new Label();
+                lbHolidayName.Text = "<br/>" + current_holiday.Value;
+                e.Cell.Controls.Add(lbHolidayName);
             }
         }
 
