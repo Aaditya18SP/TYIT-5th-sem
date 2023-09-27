@@ -1,16 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="911s.aspx.cs" Inherits="_911s" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomMasterPage.master" AutoEventWireup="true" CodeFile="911s.aspx.cs" Inherits="_911s" Theme="MyThemeFolder" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" >
+<div style="position:relative">
+<asp:Image runat="server" Height="100%" Width="100%" ImageUrl="https://www.motortrend.com/uploads/2023/08/2024-porsche-911-st-60th-anniversary-16.jpg?fit=around%7C875:492"/>
+<asp:Label ID="Label1" runat="server" width="100%" Text="Celebrate 60 years with us! The all new 911 S/T." SkinID="whiteText" style="position:absolute;left:0px;bottom:0px;font-weight:bold;font-size:6em;" />
+</div>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>

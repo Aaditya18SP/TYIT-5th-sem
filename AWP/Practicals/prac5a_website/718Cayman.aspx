@@ -1,16 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="718Cayman.aspx.cs" Inherits="_718Cayman" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomMasterPage.master" AutoEventWireup="true" CodeFile="718Cayman.aspx.cs" Theme="MyThemeFolder" Inherits="_718Cayman" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<div style="position:relative">
+<asp:Image runat="server" ImageUrl="~/Images/718cayman.png" Width="100%" Height="100%" />
+<asp:Label runat="server" Text="The all new Cayman" width="100%" SkinId="blackText" style="font-size:6em;font-weight:bold;position:absolute;left:0px;top:10px" />
+</div>
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>

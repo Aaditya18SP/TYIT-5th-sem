@@ -9,11 +9,18 @@
 <body>
     <form id="form1" runat="server">
 
-    <div class="div_display_all_students">
-     
-    <asp:ListBox runat="server" ID="lboxAllDetails" Width="100%" 
+    <div id="div_display_all_students">
+     <div style="display:flex; flex-direction:row">
+     <h1>All Users</h1> 
+     <h1 style="margin-left:auto"> <asp:HyperLink runat="server" ID="linkToGridView" NavigateUrl="~/CRUD_gridview.aspx"> Go to GridView</asp:HyperLink> </h1>
+     </div>
+     <asp:Label runat="server" ID="lbFetchMsg" />
+     <br />
+    <asp:ListBox runat="server" ID="lboxAllDetails" Width="100%"   Rows="10"
             onselectedindexchanged="lboxAllDetails_SelectedIndexChanged" AutoPostBack="true" />
 
+
+<!-- This is done directly from the aspx file and not programmatically
     <!--DataSourceID="SqlDataSource1" 
             DataTextField="ctrl_id" DataValueField="ctrl_id"
     
@@ -22,10 +29,19 @@
             SelectCommand="SELECT * FROM [students]"></asp:SqlDataSource>
 
             -->
+
+            <br />
+            <br />
+            <asp:Button runat="server" ID="btnFetch" text="Fetch Users" 
+             />
     </div>
 
-    <div class="div_display_specific_details">
+    <div id="div_display_specific_details">
     <h1> The Details of the user</h1>
+
+    <asp:Label runat="server" ID="lbEditDeleteMsg" />
+    <br />
+
     <!--CTRL ID-->
     <asp:Label runat="server" ID="lbforDispCtrlId" Text="Control id:"/>
     <br />
@@ -85,8 +101,12 @@
 
     -->
 
-    <div class="input_user_details">
+    <div id="input_user_details">
     <h1> Enter Details to insert</h1>
+
+    <asp:Label runat="server" ID="lbInsertMsg" />
+    <br />
+
     <!--CTRL ID-->
     <asp:Label runat="server" ID="lbCtrlId" Text="Control id:"/>
     <br />
