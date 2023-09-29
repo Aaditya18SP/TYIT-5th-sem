@@ -18,7 +18,7 @@ public partial class _Default : System.Web.UI.Page
     {
         var entered_value = tbPassword.Text;
         lbForPassword.Text = entered_value.ToString();
-        if (entered_value.Contains("a"))
+        if (entered_value.Length > 8)
         {
             args.IsValid = true;
         }
