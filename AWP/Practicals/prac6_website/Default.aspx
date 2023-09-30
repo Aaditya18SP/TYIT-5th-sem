@@ -32,7 +32,7 @@
 
             <br />
             <br />
-            <asp:Button runat="server" ID="btnFetch" text="Fetch Users" 
+            <asp:Button runat="server" ID="btnFetch" text="Fetch Users" onclick="btnFetch_Click" 
              />
     </div>
 
