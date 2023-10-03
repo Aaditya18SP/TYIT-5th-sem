@@ -22,8 +22,8 @@
             onclick="btnFetchMethod2_Click" />
     <asp:Button runat="server" ID="btnWriteMethod2" Text ="write to XML" 
             onclick="btnWriteMethod2_Click" />
-
-     <asp:Label runat="server" ID="lbDispDetailsMethod2" Width="100%" />
+     <asp:GridView runat="server" ID="gridCars"  AutoGenerateColumns="true"/>
+     
     </div>
     </form>
 </body>
