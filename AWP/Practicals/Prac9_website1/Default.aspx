@@ -38,6 +38,20 @@
             </Columns>
         </asp:GridView>
 
+        <!--With data source-->
+    
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:masterConnectionString %>" 
+            SelectCommand="SELECT * FROM [students]" 
+            
+            UpdateCommand="UPDATE students SET name = @name WHERE (control_id = @control_id)" 
+            DeleteCommand="delete from [students] where [control_id] = @control_id" 
+            ConflictDetection="CompareAllValues" >
+           
+            </asp:SqlDataSource>
+    
+   
+
          <asp:GridView ID="gvStudentsDataBind" runat="server"  
             EmptyDataText="Nothing here" ShowFooter="True" 
             onrowdeleting="gvStudentsDataBind_RowDeleting" 
@@ -52,19 +66,7 @@
             </Columns>
         </asp:GridView>
     
-    <!--With data source-->
-    <!--
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:masterConnectionString %>" 
-            SelectCommand="SELECT * FROM [students]" 
-            
-            UpdateCommand="UPDATE students SET name = @name WHERE (control_id = @control_id)" 
-            DeleteCommand="delete from [students] where [control_id] = @control_id" 
-            ConflictDetection="CompareAllValues" >
-           
-            </asp:SqlDataSource>
     
-    -->
 
 
     </div>
