@@ -10,10 +10,36 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        xmlTextReadermethod();
+        //xmlTextReadermethod();
     }
 
-    //-----------------------CUSTOM EVENTS---------------------------
+    //---------------------WHEN FETCH BUTTON FOR METHOD1 IS CLICKED-----------------------
+    protected void btnFetchMethod1_Click(object sender, EventArgs e)
+    {
+        xmlTextReadermethod();
+    }
+    //---------------------WHEN WRITE BUTTON FOR METHOD1 IS CLICKED-----------------------
+    protected void btnWriteMethod1_Click(object sender, EventArgs e)
+    {
+        xmlTextWriterMethod();
+    }
+    //---------------------WHEN FETCH BUTTON FOR METHOD2 IS CLICKED-----------------------
+    protected void btnFetchMethod2_Click(object sender, EventArgs e)
+    {
+
+    }
+    //---------------------WHEN WRITE BUTTON FOR METHOD2 IS CLICKED-----------------------
+
+    protected void btnWriteMethod2_Click(object sender, EventArgs e)
+    {
+
+    }
+
+
+    //-----------------------CUSTOM FUNCTIONS---------------------------
+    
+    //1.fetch from xml using xmlreadermethod()
+
     protected void xmlTextReadermethod()
     {
         //get the absolute path of the xml file
@@ -44,6 +70,7 @@ public partial class _Default : System.Web.UI.Page
             {
                 writer.Write("<b>Type:</b>");
                 writer.Write(r.NodeType.ToString());
+                writer.Write("<br/>");
                 writer.Write("<b>Tag Name:</b>");
                 writer.Write(r.Name);
             }
@@ -51,8 +78,10 @@ public partial class _Default : System.Web.UI.Page
             //if the TAG has a value such as text
             if (r.Value != "")
             {
+                writer.Write("<br/>");
                 writer.Write("<b>Type:</b>");
                 writer.Write(r.NodeType.ToString());
+                writer.Write("<br/>");
                 writer.Write("<b>Value of tag:</b>");
                 writer.Write(r.Value);
             }
@@ -66,6 +95,7 @@ public partial class _Default : System.Web.UI.Page
 
                 for (int i = 0; i < r.AttributeCount; i++)
                 {
+                    writer.Write("<br/>");
                     writer.Write("<b>Attribute :</b>");
                      
                     //move to the attribute
@@ -89,4 +119,67 @@ public partial class _Default : System.Web.UI.Page
 
         lbDetails.Text = writer.ToString();
     }
+
+
+    //2. Write to an XML file using XMLTextWriter
+
+    protected void xmlTextWriterMethod()
+    {
+        string file = Path.Combine(Request.PhysicalApplicationPath, "XMLfile_to_write_to_method_1.xml");
+        FileStream fs = new FileStream(file, FileMode.Create);
+        XmlTextWriter w = new XmlTextWriter(fs, null); //2nd parameter is encoding
+
+        w.WriteStartDocument();
+
+        w.WriteStartElement("All_Cars");
+
+        w.WriteComment(" This is the root tag");
+
+        //first car
+        w.WriteStartElement("car");
+        w.WriteAttributeString("is_Convertible", "false");
+        w.WriteAttributeString("Car_type", "sedan");
+
+        w.WriteStartElement("Brand");
+        w.WriteString("Porsche");
+        w.WriteEndElement();
+
+        w.WriteStartElement("Model");
+        w.WriteString("Panamera");
+        w.WriteEndElement();
+
+        w.WriteStartElement("hp");
+        w.WriteString("500hp");
+        w.WriteEndElement();
+
+        w.WriteEndElement();
+
+
+        //second car
+        w.WriteStartElement("Brand");
+        w.WriteString("Ferrari");
+        w.WriteEndElement();
+
+        w.WriteStartElement("Model");
+        w.WriteString("296 GTS");
+        w.WriteEndElement();
+
+        w.WriteStartElement("hp");
+        w.WriteString("800hp");
+        w.WriteEndElement();
+
+
+        //end the <All Cars> tag
+        w.WriteEndElement();
+
+        //end the document
+        w.WriteEndDocument();
+
+        //close the stream
+        w.Close();
+
+        //Display message when written successfully
+        Response.Write("Written Successfully");
+    }
+
 }
