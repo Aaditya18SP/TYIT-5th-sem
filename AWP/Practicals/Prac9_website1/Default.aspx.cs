@@ -26,23 +26,43 @@ public partial class _Default : System.Web.UI.Page
     //---------------SELECT EVENT--------------------------------
     protected void gvStudentsDataBind_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        displayDetails();
     }
 
     //---------------EDIT EVENT--------------------------------
     protected void gvStudentsDataBind_RowEditing(object sender, GridViewEditEventArgs e)
     {
-        string updatequery = "";
-        SqlCommand cmd = new SqlCommand(updatequery,conn);
+        //string updatequery = "";
+        //SqlCommand cmd = new SqlCommand(updatequery,conn);
+        updateDetailsOfStudent();
 
     }
 
     //---------------DELETE EVENT--------------------------------
     protected void gvStudentsDataBind_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
-
+        deleteDetailsOfStudent();
 
     }
 
+
+    //---------------------------------------CUSTOM FUNCTIONS--------------------------------------
+    //1.display the selected students details
+    protected void displayDetails()
+    {
+
+    }
+
+    //2.update the students details
+    protected void updateDetailsOfStudent()
+    {
+
+    }
+
+    //3.delete the students details
+    protected void deleteDetailsOfStudent()
+    {
+
+    }
   
 }
