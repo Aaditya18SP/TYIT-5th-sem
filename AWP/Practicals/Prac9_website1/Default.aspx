@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
 
-    <h1>GRIDVIEW</h1>
+    <h1> GRIDVIEW 1- using SqlDataSource</h1>
     
     <div class="grid_view">
         <asp:GridView ID="gvStudents" runat="server"  AutoGenerateColumns="False" 
@@ -51,12 +51,11 @@
             </asp:SqlDataSource>
     
    
-
+   <h1> GRIDVIEW 2- using Dataset</h1>
          <asp:GridView ID="gvStudentsDataBind" runat="server"  
             EmptyDataText="Nothing here" ShowFooter="True" 
             onrowdeleting="gvStudentsDataBind_RowDeleting" 
-            onrowediting="gvStudentsDataBind_RowEditing" 
-            onrowupdating="gvStudentsDataBind_RowUpdating" 
+            onrowediting="gvStudentsDataBind_RowEditing"
             onselectedindexchanged="gvStudentsDataBind_SelectedIndexChanged">
             <Columns>
              <asp:CommandField ShowEditButton="true" HeaderText="edit info" />

@@ -62,7 +62,8 @@ Remove the all the details of the user 12345678905 including messages, reported 
 
 //PROJECTOR
 count(), limit(),sort(),skip(),findOne()
-Find and count the number of reported items with a location in alphabetical order (ascending).
+Find reported items with a location in alphabetical order (ascending) limit the result to 5 items
+
 Find and count the number of reported items with a progress status of "completed" and limit the result to 5 items.
 Find and count the number of reported items with a category ID of 50000000002, sorted by date of loss (descending), and skip the first 2 items.
 Find and count the number of reported items with a progress status of "pending" and a category ID of 50000000001, sorted by date of loss (ascending), and limit the result to 3 items.

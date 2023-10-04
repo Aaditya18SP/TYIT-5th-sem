@@ -172,6 +172,7 @@ public partial class _Default : System.Web.UI.Page
         w.WriteString("800hp");
         w.WriteEndElement();
 
+        w.WriteEndElement(); //ends the <car> tag
 
         //end the <All Cars> tag
         w.WriteEndElement();

@@ -949,20 +949,21 @@ db.reported_item.find({$or:[{"r_date_of_loss": {$lte:new Date("2023-08-15")}}, {
 //2.Find the reported images that are not an array
 db.reported_image.find({"r_images":{$type:"array"}})
 
-//AGGREGRATION	
-//Questions
-1.Find the total number of reported items that belong to the category “Electronics” and have a status of “Lost”.
-2Find the first 10 users who have reported items and sort them by their registration date in ascending order.
-3.Find the number of messages sent by each user and sort them in descending order.
-4.Find the reported items that have been viewed more than 100 times and sort them by their view count in descending order.
-5.Find the security questions that have been answered incorrectly more than 3 times and sort them by the number of incorrect answers in descending order.
-6.Find the total number of reported items that belong to the category “Electronics” and have a status of “Lost”.
-7.Find the first 10 users who have reported items and sort them by their registration date in ascending order.
-8.Find the number of messages sent by each user and sort them in descending order.
-9.Find the reported items that have been viewed more than 100 times and sort them by their view count in descending order.
-10.Find the security questions that have been answered incorrectly more than 3 times and sort them by the number of incorrect answers in descending order.
-
 //PROJECTORS
+//1.Find reported items with a location in alphabetical order (ascending) limit the result to 5 items
+> db.reported_item.find().sort({r_location:1}).limit(5)
+
+//2.Find the total number of items that have the progress as 'found'
+>db.reported_item.find({r_progress:"f"}).count()
+
+//3.Find the reported items that belong to category 50000000001 and sort them in a descending order while skipping the first 2 items.
+> db.reported_item.find({category_id:50000000001}).sort({r_date_of_loss:-1}).skip(2)
+
+//4.Find 3 reported items that have been reported items between 1 aug and 17 aug . Also,sort them in a ascending order on basis of their reported date
+>  db.reported_item.find({ $and:[{r_date_of_loss: {$gt:new ISODate("2023-08-01") }}, {r_date_of_loss:{$lt:new ISODate("2023-08-17")}} ] }).sort({r_date_of_loss:1}).limit(3);
+
+//5.Find the reported item with a location of "Library" and display its name, location, and date of loss.
+>db.reported_item.findOne({r_location:"Library"},{r_name:1,r_location:1,r_date_of_loss:1});
 
 //UPDATE()
 
