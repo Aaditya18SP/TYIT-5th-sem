@@ -1,14 +1,3 @@
-PRACTICAL 5A
-
-/*
-DONT DO THESE
-QUERIES
-1.Find the total number of reported items in each category:
-2.Calculate the average time of loss for each category:
-3.Find the earliest date of loss for each category:
-4.Find the latest date of loss for each category
-5.Calculate the total number of reported items and the average time of loss for each user
-*/
 
 //AGGREGRATION	
 //1.Find the total sales done and the average quantity sold including all the items. 
@@ -81,4 +70,3 @@ QUERIES
   { _id: 'C', total_sale: 15500, avg_sale: 5166.666666666667 },
   { _id: 'A', total_sale: 10340, avg_sale: 2585 }
 ]
-
