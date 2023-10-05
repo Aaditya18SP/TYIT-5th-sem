@@ -1,33 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<cars>
-  <porsche>
-    <gt3 hasmatheykit="false">
+<All_cars>
+  <car car_type="sports_car">
+    <name>GT3</name>
       <hp>506hp</hp>
       <color>shark blue</color>
-      <gen>992</gen>
-    </gt3>
-
-    <gt3rs hasmatheykit="true">
+      <brand>porsche</brand>
+  </car>
+  
+  <car car_type="sports_car">
+    <name>GT3RS</name>
       <hp>520hp</hp>
       <color>python green</color>
-      <gen>991.2</gen>
-    </gt3rs>
-    
-  </porsche>
+      <brand>porsche</brand>
+     
+  </car>
 
-  <Tata>
-    <nano>
+  <car car_type="small_car">
+    <name>Nano</name>
       <hp>100hp</hp>
       <color>white</color>
-      <gen>1</gen>
-    </nano>
-
-    <safari>
+      <brand>Tata</brand>
+   
+    </car>
+  
+  <car car_type="SUV">
+    <name>Safari</name>
       <hp>120hp</hp>
       <color>black</color>
-      <gen>2</gen>
-    </safari>
+      <brand>Tata</brand>
     
-  </Tata>
+  </car>
   
-</cars>
+  
+</All_cars>

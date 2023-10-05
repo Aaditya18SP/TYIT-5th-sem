@@ -1,0 +1,34 @@
+6B -MONGODUMP
+>mongodump  --db lost_and_found_db --out D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED  --tlsInsecure
+
+>mongodump  --db lost_and_found_db  --tlsInsecure
+
+>mongodump --host=127.0.0.1 --port=27017 --db lost_and_found_db  --tlsInsecure
+
+//backup a single collection
+>mongodump  --db lost_and_found_db --out D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED  --tlsInsecure --collection reported_item
+
+//OUTPUT
+2023-10-04T20:42:02.423+0530    writing lost_and_found_db.reported_item to D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED\lost_and_found_db\reported_item.bson
+2023-10-04T20:42:02.434+0530    done dumping lost_and_found_db.reported_item (11 documents)
+
+
+6C -MONGORESTORE
+
+//restore an entire database
+>mongorestore --dir D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED\lost_and_found_db --db LF
+
+//RESTORE ENTIRE DATABASE WITHOUT SPECIFYING --dir
+>mongorestore D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED\lost_and_found_db --db LFFFFF
+
+
+//RESTORE A SINGLE COLLECTION WITHOUT SPECIFYING --dir
+>mongorestore D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED\lost_and_found_db\reported_item.bson --db LFFFFF --collection reported_item
+
+// RESTORE A SINGLE COLLECTION 
+>mongorestore --dir D:\BSCIT\TY\TYIT-5th-sem\NGT\MongoDB\EXPORTED\lost_and_found_db\reported_item.bson --db LF --collection reported_item
+
+//OUTPUT
+finished restoring LF.reported_item (11 documents, 0 failures)
+2023-10-04T20:49:48.181+0530    no indexes to restore for collection LF.reported_item
+2023-10-04T20:49:48.184+0530    11 document(s) restored successfully. 0 document(s) failed to restore.

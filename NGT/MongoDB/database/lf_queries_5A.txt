@@ -1,0 +1,84 @@
+PRACTICAL 5A
+
+/*
+DONT DO THESE
+QUERIES
+1.Find the total number of reported items in each category:
+2.Calculate the average time of loss for each category:
+3.Find the earliest date of loss for each category:
+4.Find the latest date of loss for each category
+5.Calculate the total number of reported items and the average time of loss for each user
+*/
+
+//AGGREGRATION	
+//1.Find the total sales done and the average quantity sold including all the items. 
+>db.transactions.aggregate([{
+... $group:{
+... _id:null,
+... total_sale:{$sum:"$price"},
+... average_quantity_sold:{$avg:"$quantity_sold"}
+... }
+... }]);
+
+//output
+[ { _id: null, total_sale: 1100, average_quantity_sold: 21.3 } ]
+
+//2.Find the maximum discount given for all items
+>db.transactions.aggregate([{ $group:{ _id:null, max_discount_any_item:{$max:"$discount"} } }]) ;
+[ { _id: null, max_discount_any_item: 20 } ]
+
+//3.Find the least number of quantities sold for all items
+> db.transactions.aggregate([{ $group:{ _id:null, least_quantity_sold:{$min:"$quantity_sold"} } }]) ;
+[ { _id: null, least_quantity_sold: 5 } ]
+
+//4. Find the average quantity sold and average discount for each item
+>db.transactions.aggregate([{ $group:{_id:"$product", avg_quantity_sold:{$avg:"$quantity_sold"}, avg_discount:{$avg:"$discount"} } }]);
+[
+  { _id: 'B', avg_quantity_sold: 11.666666666666666, avg_discount: 10 },
+  {
+    _id: 'C',
+    avg_quantity_sold: 26.666666666666668,
+    avg_discount: 10.666666666666666
+  },
+  { _id: 'A', avg_quantity_sold: 24.5, avg_discount: 6.5 }
+]
+
+//5. Find the total quantity sold , max and min discount given to each item
+>db.transactions.aggregate([{
+... $group:{
+... _id:"$product",
+... total_qnty_sold:{$sum:"$quantity_sold"},
+... min_disc:{$min:"$discount"},
+... max_disc:{$max:"$discount"}
+... }
+... }]);
+[
+  { _id: 'A', total_qnty_sold: 98, min_disc: 2, max_disc: 10 },
+  { _id: 'B', total_qnty_sold: 35, min_disc: 5, max_disc: 15 },
+  { _id: 'C', total_qnty_sold: 80, min_disc: 2, max_disc: 20 }
+]
+
+
+//6. Find the max and min price each item
+>db.transactions.aggregate([{ $group: { _id: "$product", min_price: { $min: "$price" }, max_price: { $max: "$price" } } }]);
+[
+  { _id: 'A', min_price: 80, max_price: 120 },
+  { _id: 'B', min_price: 50, max_price: 50 },
+  { _id: 'C', min_price: 150, max_price: 200 }
+]
+
+//7. Find the least and maximum number of quantities sold for each item.
+> db.transactions.aggregate([{ $group: { _id: "$product", min_quantity: { $min: "$quantity_sold" }, max_quantity: { $max: "$quantity_sold" } } }]);
+[
+  { _id: 'A', min_quantity: 10, max_quantity: 50 },
+  { _id: 'B', min_quantity: 5, max_quantity: 20 },
+  { _id: 'C', min_quantity: 10, max_quantity: 50 }
+]
+//8.  Find the total selling price of each item ( price * quantity_sold), average selling price for each item 
+> db.transactions.aggregate([{ $group:{ _id:"$product", total_sale:{$sum:{$multiply:["$price","$quantity_sold"]}},avg_sale:{$avg:{$multiply:["$price","$quantity_sold"]}} } }]);
+[
+  { _id: 'B', total_sale: 1750, avg_sale: 583.3333333333334 },
+  { _id: 'C', total_sale: 15500, avg_sale: 5166.666666666667 },
+  { _id: 'A', total_sale: 10340, avg_sale: 2585 }
+]
+

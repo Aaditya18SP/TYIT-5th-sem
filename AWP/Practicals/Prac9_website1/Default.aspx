@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
 
-    <h1>GRIDVIEW</h1>
+    <h1> GRIDVIEW 1- using SqlDataSource</h1>
     
     <div class="grid_view">
         <asp:GridView ID="gvStudents" runat="server"  AutoGenerateColumns="False" 
@@ -38,22 +38,8 @@
             </Columns>
         </asp:GridView>
 
-         <asp:GridView ID="gvStudentsDataBind" runat="server"  
-            EmptyDataText="Nothing here" ShowFooter="True" 
-            onrowdeleting="gvStudentsDataBind_RowDeleting" 
-            onrowediting="gvStudentsDataBind_RowEditing" 
-            onrowupdating="gvStudentsDataBind_RowUpdating" 
-            onselectedindexchanged="gvStudentsDataBind_SelectedIndexChanged">
-            <Columns>
-             <asp:CommandField ShowEditButton="true" HeaderText="edit info" />
-                    <asp:CommandField HeaderText="Select info" ShowSelectButton="true" />
-                   
-                    <asp:CommandField  HeaderText="Delete info" ShowDeleteButton="true" />
-            </Columns>
-        </asp:GridView>
+        <!--With data source-->
     
-    <!--With data source-->
-    <!--
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
             ConnectionString="<%$ ConnectionStrings:masterConnectionString %>" 
             SelectCommand="SELECT * FROM [students]" 
@@ -64,7 +50,22 @@
            
             </asp:SqlDataSource>
     
-    -->
+   
+   <h1> GRIDVIEW 2- using Dataset</h1>
+         <asp:GridView ID="gvStudentsDataBind" runat="server"  
+            EmptyDataText="Nothing here" ShowFooter="True" 
+            onrowdeleting="gvStudentsDataBind_RowDeleting" 
+            onrowediting="gvStudentsDataBind_RowEditing"
+            onselectedindexchanged="gvStudentsDataBind_SelectedIndexChanged">
+            <Columns>
+             <asp:CommandField ShowEditButton="true" HeaderText="edit info" />
+                    <asp:CommandField HeaderText="Select info" ShowSelectButton="true" />
+                   
+                    <asp:CommandField  HeaderText="Delete info" ShowDeleteButton="true" />
+            </Columns>
+        </asp:GridView>
+    
+    
 
 
     </div>
