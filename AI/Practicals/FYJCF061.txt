@@ -1,0 +1,10 @@
+<!doctypehtml>
+<html>
+<head>
+<title>My first html</title>
+</head>
+<body>
+<center><u> Welcome </u></center>
+
+</body>
+</html>

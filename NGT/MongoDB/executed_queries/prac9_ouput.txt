@@ -1,0 +1,50 @@
+Object id inserted: 651e4211db07d01ee016c659
+[ObjectId('651e4211db07d01ee016c65a'), ObjectId('651e4211db07d01ee016c65b'), ObjectId('651e4211db07d01ee016c65c')]
+
+
+
+find one
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche'}
+
+
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche'}
+{'_id': ObjectId('651e4211db07d01ee016c65a'), 'brand': 'Porsche', 'model': 'GT3RS'}
+{'_id': ObjectId('651e4211db07d01ee016c65b'), 'brand': 'Ferrari', 'model': 'FXXK Evo'}
+{'_id': ObjectId('651e4211db07d01ee016c65c'), 'brand': 'Ferrari', 'model': '812 Competitzione'}
+
+Updating.....
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche', 'hp': 500, 'top_speed_in_mph': 1000, 'colors': ['red', 'green', 'blue']}
+{'_id': ObjectId('651e4211db07d01ee016c65a'), 'brand': 'Porsche', 'model': 'GT3RS', 'hp': 520, 'colors': ['red', 'blue'], 'top_speed': 200}
+{'_id': ObjectId('651e4211db07d01ee016c65b'), 'brand': 'Ferrari', 'model': 'FXXK Evo', 'hp': 900, 'colors': ['red', 'blue'], 'top_speed': 250}
+{'_id': ObjectId('651e4211db07d01ee016c65c'), 'brand': 'Ferrari', 'model': '812 Competitzione', 'hp': 830, 'colors': ['red', 'blue'], 'top_speed': 220}
+
+Updating multiple
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche', 'hp': 500, 'top_speed_in_mph': 1000, 'colors': ['red', 'green', 'blue']}
+{'_id': ObjectId('651e4211db07d01ee016c65a'), 'brand': 'Porsche', 'model': 'GT3RS', 'hp': 520, 'colors': ['red', 'blue'], 'top_speed': 200}
+{'_id': ObjectId('651e4211db07d01ee016c65b'), 'brand': 'Ferrari', 'model': 'FXXK Evo', 'hp': 900, 'colors': ['red', 'blue'], 'top_speed': 250, 'engine': 'V12 NA'}
+{'_id': ObjectId('651e4211db07d01ee016c65c'), 'brand': 'Ferrari', 'model': '812 Competitzione', 'hp': 830, 'colors': ['red', 'blue'], 'top_speed': 220, 'engine': 'V12 NA'}
+
+Unsetting ........
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche', 'hp': 500, 'colors': ['red', 'green', 'blue']}
+{'_id': ObjectId('651e4211db07d01ee016c65a'), 'brand': 'Porsche', 'model': 'GT3RS', 'hp': 520, 'colors': ['red', 'blue'], 'top_speed': 200}
+{'_id': ObjectId('651e4211db07d01ee016c65b'), 'brand': 'Ferrari', 'model': 'FXXK Evo', 'hp': 900, 'colors': ['red', 'blue'], 'top_speed': 250, 'engine': 'V12 NA'}
+{'_id': ObjectId('651e4211db07d01ee016c65c'), 'brand': 'Ferrari', 'model': '812 Competitzione', 'hp': 830, 'colors': ['red', 'blue'], 'top_speed': 220, 'engine': 'V12 NA'}
+
+1 documents updated
+
+deleting one ........
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche', 'hp': 500, 'colors': ['red', 'green', 'blue']}
+{'_id': ObjectId('651e4211db07d01ee016c65a'), 'brand': 'Porsche', 'model': 'GT3RS', 'hp': 520, 'colors': ['red', 'blue'], 'top_speed': 200}
+{'_id': ObjectId('651e4211db07d01ee016c65b'), 'brand': 'Ferrari', 'model': 'FXXK Evo', 'hp': 900, 'colors': ['red', 'blue'], 'top_speed': 250, 'engine': 'V12 NA'}
+{'_id': ObjectId('651e4211db07d01ee016c65c'), 'brand': 'Ferrari', 'model': '812 Competitzione', 'hp': 830, 'colors': ['red', 'blue'], 'top_speed': 220, 'engine': 'V12 NA'}
+
+0 documents deleted
+
+deleting many........
+{'_id': ObjectId('651e4211db07d01ee016c659'), 'brand': 'Porsche', 'hp': 500, 'colors': ['red', 'green', 'blue']}
+{'_id': ObjectId('651e4211db07d01ee016c65a'), 'brand': 'Porsche', 'model': 'GT3RS', 'hp': 520, 'colors': ['red', 'blue'], 'top_speed': 200}
+{'_id': ObjectId('651e4211db07d01ee016c65c'), 'brand': 'Ferrari', 'model': '812 Competitzione', 'hp': 830, 'colors': ['red', 'blue'], 'top_speed': 220, 'engine': 'V12 NA'}
+
+0 documents deleted
+
+3 docs deleted
