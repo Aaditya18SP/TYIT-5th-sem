@@ -1,0 +1,98 @@
+[{
+	"_id": 1001,
+	"brand": "Aston Martin",
+	"model": "Valkyrie",
+	"hp": 1000,
+	"top_speed": 220
+},
+{
+	"_id": 1002,
+	"brand": "Aston Martin",
+	"model": "Valkyrie AMR PRO",
+	"hp": 1100,
+	"top_speed": 210
+},
+{
+	"_id": 1003,
+	"brand": "Rolls Royce",
+	"model": "Ghost",
+	"hp": 600,
+	"top_speed": 170
+},
+{
+	"_id": 1004,
+	"brand": "Rolls Royce",
+	"model": "Phantom",
+	"hp": 650,
+	"top_speed": 175
+},
+{
+	"_id": 1005,
+	"brand": "Bentley",
+	"model": "Continental GT",
+	"hp": 650,
+	"top_speed": 175
+},
+{
+	"_id": 1006,
+	"brand": "Koenigsegg",
+	"model": "Jesko",
+	"hp": 1600
+},
+{
+	"_id": 1007,
+	"brand": "Koenigsegg",
+	"model": "Gemera",
+	"hp": 1300
+},
+{
+	"_id": 1008,
+	"brand": "Lamborghini",
+	"model": "Revuelto",
+	"hp": 1000,
+	"top_speed": 211
+},
+{
+	"_id": 1009,
+	"brand": "Lamborghini",
+	"model": "Aventador SVJ",
+	"hp": 800,
+	"top_speed": 212
+},
+{
+	"_id": {
+		"$oid": "652450bae0d0fce69681c024"
+	},
+	"brand": "Porsche",
+	"model": "GT3RS",
+	"hp": 500,
+	"top_speed": 198
+},
+{
+	"_id": {
+		"$oid": "652450bae0d0fce69681c025"
+	},
+	"brand": "Pagani",
+	"model": "Huayra R",
+	"hp": 700,
+	"top_speed": 220
+},
+{
+	"_id": {
+		"$oid": "652450bae0d0fce69681c026"
+	},
+	"brand": "Porsche",
+	"model": "GT3",
+	"hp": 500,
+	"top_speed": 198
+},
+{
+	"_id": {
+		"$oid": "652450bae0d0fce69681c027"
+	},
+	"brand": "Ferrari",
+	"model": "Daytona SP3",
+	"hp": 820,
+	"top_speed": 230
+}]
+

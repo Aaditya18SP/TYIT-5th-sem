@@ -1,0 +1,43 @@
+/*------------------------------
+AGGREGATION
+
+-------------------------------*/
+
+1.Calculate the total horsepower for each car brand
+> db.cars.aggregate({$group:{
+"_id":"$brand",
+"total_hp":{$sum:"$hp"}
+}
+})
+
+2.Find the minimum and maximum horsepower for each car brand
+>
+
+3.Calculate the average horsepower for each car brand:
+>
+
+4.Calculate the avg horsepower, minimum and maximum top speed for each car brand
+>db.cars.aggregate({
+ $group:{
+ "_id":"$brand",
+ "avg_hp":{$avg:"$hp"},
+ "max_top_speed":{$max:"$top_speed"},
+ "min_top_speed":{$min:"$top_speed"}
+ }
+ }
+ )
+
+5.Calculate the average top speed and count of cars for each car brand
+>db.cars.aggregate({ $group:{ "_id":"$brand", "count":{$sum:1} ,"avg_top_speed":{$avg:"$top_speed"}}})
+
+6.Find the car models with the highest and lowest horsepower for each car brand
+>db.cars.aggregate({
+ $group:{
+ "_id":{
+ "model":"$model",
+ "brand":"$brand"
+ },
+ "max_hp":{$max:"$hp"},
+ "min_hp":{$min:"$hp"}
+ }
+ })

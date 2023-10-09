@@ -1,0 +1,19 @@
+/*--------------------
+
+MONGO IMPORT
+--------------------*/
+//FROM JSON
+>mongoimport --file "D:\BSCIT\TY\TYIT-5th-sem\PRACTICAL PRACTICE\NGT\Jquery and JSON\json_files\Cars.json" --jsonArray --db cars_db --collection cars --type json
+
+//FROM CSV
+>mongoimport --host localhost --db new_cars_db --file "D:\BSCIT\TY\TYIT-5th-sem\PRACTICAL PRACTICE\NGT\MongoDB\Exported files\cars.csv" --type csv --fields "brand,model,top_speed,hp"
+
+/*--------------------
+
+MONGO EXPORT
+--------------------*/
+//TO JSON
+>mongoexport --db cars_db --type json --pretty --collection cars --jsonArray --out "D:\BSCIT\TY\TYIT-5th-sem\PRACTICAL PRACTICE\NGT\MongoDB\Exported files\cars.json" --fields "brand,model,top_speed,hp" --host localhost
+
+//TO CSV
+>mongoexport --db cars_db --type csv --collection cars --jsonArray --out "D:\BSCIT\TY\TYIT-5th-sem\PRACTICAL PRACTICE\NGT\MongoDB\Exported files\cars.csv" --fields "brand,model,top_speed,hp" --host localhost

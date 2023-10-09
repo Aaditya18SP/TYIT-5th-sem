@@ -1,0 +1,6 @@
+>show dbs
+>use LF
+>show collections
+>db.createCollection("users")
+>db.users.drop()
+>db.dropDatabase()

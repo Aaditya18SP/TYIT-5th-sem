@@ -1,0 +1,190 @@
+>use cars_db
+
+/*-------------------------------------------------------------------
+
+INSERT DOCUMENTS
+--------------------------------------------------------------------*/
+
+//insert({})
+>db.cars.insert({"_id":1001,"brand":"Aston Martin","model":"Valkyrie","hp":1000,"top_speed":220,"release_date":new Date("2022-11-16")})
+
+//insertOne({})
+>db.cars.insertOne({"_id":1002,"brand":"Aston Martin","model":"Valkyrie AMR PRO","hp":1100,"top_speed":210,"release_date":new Date("2022-12-16")})
+
+//insertMany([])
+>
+ db.cars.insertMany([
+ {
+ "brand":"Rolls Royce",
+"_id":1003,
+ "model":"Ghost",
+ "hp":600,
+ "top_speed":170,
+ "release_date":new Date("2021-06-20"),
+ "type":"luxury sedan"
+ },
+ {
+ "brand":"Rolls Royce",
+"_id":1004,
+ "model":"Phantom",
+ "hp":650,
+ "top_speed":175,
+ "release_date":new Date("2020-05-20"),
+ "type":"luxury sedan"
+ },
+ {
+ "brand":"Bentley",
+ "model":"Continental GT",
+"_id":1005,
+ "hp":650,
+ "top_speed":175,
+ "release_date":new Date("2022-05-20"),
+ "type":"luxury sedan"
+ },{
+ "brand":"Koenigsegg",
+ "model":"Jesko",
+"_id":1006,
+ "hp":1600,
+ "release_date":new Date("2023-05-20"),
+ "type":"hypercar"
+ },
+ {
+ "brand":"Koenigsegg",
+ "model":"Gemera",
+"_id":1007,
+ "hp":1300,
+ "release_date":new Date("2023-05-20"),
+ "type":"hypercar"
+ },
+ {
+ "brand":"Lamborghini",
+ "model":"Revuelto",
+ "hp":1000,
+"_id":1008,
+ "top_speed":211,
+ "release_date":new Date("2023-06-20"),
+ "type":"supercar"
+ },
+ {
+ "brand":"Lamborghini",
+ "model":"Aventador SVJ",
+"_id":1009,
+ "hp":800,
+ "top_speed":212,
+ "release_date":new Date("2020-06-20"),
+ "type":"supercar"
+ }
+ ])
+
+/*-------------------------------------------------------------------
+
+READ DOCUMENTS
+--------------------------------------------------------------------*/
+
+//COMPARISON OPERATORS
+lt,lte,gt,gte,in,nin,exists,type
+
+//LOGICAL OPERATORS
+and,or,nor
+
+//PROJECTORS AND count()
+limit(),skip(),pretty(),findOne(),sort(),count()
+
+//QUERIES
+1.Find all luxury sedans or hypercars released in 2022 with at least 500 hp
+>db.cars.find({ $or: [{ "type": "luxury sedan" }, { "type": "hypercars" }], "release_date": { $gte: new Date("2022-01-01") }, "hp": { $gte: 500 } } )
+
+2.Find all cars with a brand of "Rolls Royce" or "Lamborghini" that have a top speed greater than or equal to 170:
+> db.cars.find({
+ "brand":{$in:["Lamborghini","Rolls Royce"]}, "top_speed":{$gte:170}
+ })
+
+
+3.Find all cars with a release date in 2022 and a type of "luxury sedan" or "supercar" with hp greater than 600:
+>db.cars.find({ "release_date":{$gte:new Date("2022-01-01")}, $or:[
+ {"type":"luxury sedan"},
+ {"type":"supercar"}
+ ]
+,"hp":{$gte:600}
+ })
+
+4.Find all cars with a release date before 2021, excluding those with 600 hp or a top speed of 150
+>db.cars.find({
+ "release_date":{$lte:new Date("2022-01-01")},
+ $nor:[
+ {"hp":{$lt:600}},
+ {"top_speed":{$lt:150}}
+ ]
+ })
+
+
+5.Find all cars with a brand other than "Rolls Royce" and a release date in 2021 or 2022, sorted by top speed in descending order:
+>db.cars.find({ 
+"brand":{$ne:"Rolls Royce"}, 
+$or:[ 
+{"release_date":{$lte:new Date("2021-12-31")}}, {"release_date":{$lte:new Date("2022-12-31")}} 
+]
+} ).sort({"top_speed":-1})
+
+6.Find all cars sorted by release date in descending order and limit the results to the first 5
+>db.cars.find({
+ }).sort({"release_date":-1}).limit(5)
+
+7.Find all cars of the brand "Rolls Royce," sort them by horsepower in descending order, and skip the first result
+>db.cars.find({ "brand": "Rolls Royce" }).sort({ hp: -1 }).skip(1
+
+8.Find all hypercars brand and model (type "hypercar") sorted by top speed in ascending order and limit the results to 3:
+>db.cars.find({"type":"hypercar"},{"brand":1,"model":1}).sort({"top_speed":1}).limit(3)
+
+9.Find all cars released after June 1, 2022, sort them by release date in ascending order, and skip the first 1 result:
+>db.cars.find({ "release_date": { $gte: new Date("2022-06-01") } }).sort({ "release_date": 1,"hp":1 }).skip(1)
+
+10.Find all cars with horsepower greater than or equal to 800, sort them by horsepower in descending order, and limit the results to 4:
+>db.cars.find({
+ "hp":{$gte:800}
+ }).sort({"hp":1}).limit(4)
+
+11.Find Cars beginning with letter G
+>
+//contain letter G
+>db.cars.find({ "model": { $regex: "\G" } })
+
+//Start with G
+> db.cars.find({ "model": { $regex: "\^G" } })
+
+//Start with G and contain only letter a-e
+> db.cars.find({ "model": { $regex: "\^G[a-e]" } })
+
+
+
+
+
+
+/*-------------------------------------------------------------------
+
+UPDATE DOCUMENTS
+--------------------------------------------------------------------*/
+
+//SET
+1.Add a new field "discounted" and set it to true for all cars with a top speed greater than 200:
+>db.cars.update({"top_speed":{$gte:200} },{$set:{"discounted":true}},{multi:true} )
+
+2.update the "release_date" of a car with id 1004
+>db.cars.update({ "_id":1004}, {$set:{"release_date":new Date("2024-03-23")}})
+
+
+//UNSET
+1.Remove the "discounted" field from all documents
+>db.cars.update({},{$unset:{discounted:""}},{multi:true})
+
+/*-------------------------------------------------------------------
+
+DELETE DOCUMENTS
+--------------------------------------------------------------------*/
+
+//remove({}) -->removes all document 
+//1.remove all
+>db.cars.remove({})
+
+//2. remove cars who have the type field
+db.cars.remove({"type":{$exists:true}})

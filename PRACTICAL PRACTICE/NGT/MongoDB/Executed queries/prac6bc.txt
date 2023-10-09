@@ -1,0 +1,15 @@
+/*--------------------
+
+MONGO DUMP
+--------------------*/
+
+//entire db
+>mongodump --host localhost --out "D:\BSCIT\TY\TYIT-5th-sem\PRACTICAL PRACTICE\NGT\MongoDB\Backupdb" --db cars_db
+
+/*--------------------
+
+MONGO RESTORE
+--------------------*/
+
+//entire db
+>mongorestore --host localhost --db new_cars_db --dir "D:\BSCIT\TY\TYIT-5th-sem\PRACTICAL PRACTICE\NGT\MongoDB\Backupdb\cars_db"
