@@ -3,7 +3,7 @@ let fetchedData;
 
  async function fetchCarsData(){
     
-     fetchedData= await fetch('../Jquery and JSON/json_files/Cars.json')
+     fetchedData= await fetch('../json_files/Cars.json')
     .then((response) => {return response.json()})
     .then((json)=>{return json});
     console.log(fetchedData);

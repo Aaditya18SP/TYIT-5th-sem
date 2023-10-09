@@ -2,6 +2,8 @@ from pymongo import MongoClient
 import pprint
 import datetime
 
+#pip install pymongo
+
 client=MongoClient('localhost',27017)
 
 db=client.cars_db
