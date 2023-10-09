@@ -1,0 +1,35 @@
+[
+  {
+    "brand": "Porsche",
+    "model": "GT3",
+    "hp": 500,
+    "top_speed": 198,
+    "colors": ["shark blue", "carmine red", "racing yellow"],
+    "release_date": "2021-08-18"
+  },
+  {
+    "brand": "Porsche",
+    "model": "GT3RS",
+    "hp": 500,
+    "top_speed": 198,
+    "colors": ["shark blue", "carmine red", "racing yellow"],
+    "release_date": "2021-08-18"
+  },
+  {
+    "brand": "Ferrari",
+    "model": "Daytona SP3",
+    "hp": 820,
+    "top_speed": 230,
+    "colors": ["rosso corsa", "baby blue", "rosso magma","blue NART"],
+    "release_date": "2022-06-08"
+  },
+
+  {
+    "brand": "Pagani",
+    "model": "Huayra R",
+    "hp": 700,
+    "top_speed": 220,
+    "colors": ["blue carbon", "copper red", "blue tdf"],
+    "release_date": "2023-08-18"
+  }
+]
