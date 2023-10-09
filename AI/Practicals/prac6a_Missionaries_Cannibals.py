@@ -22,14 +22,10 @@ class State():
         else:
             return False
 
-def __eq__(self, other):
-    return self.cannibalLeft == other.cannibalLeft and self.missionaryLeft == other.missionaryLeft  and self.boat == other.boat and self.cannibalRight == other.cannibalRight  and self.missionaryRight == other.missionaryRight
 
-def __hash__(self):
-    return hash((self.cannibalLeft, self.missionaryLeft, self.boat, self.cannibalRight, self.missionaryRight))
 
 def successors(cur_state):
-    children = [];
+    children = []
     if cur_state.boat == 'left':
         ## Two missionaries cross left to right.
         new_state = State(cur_state.cannibalLeft, cur_state.missionaryLeft - 2, 'right', cur_state.cannibalRight, cur_state.missionaryRight + 2)
@@ -122,17 +118,22 @@ def print_solution(solution):
         print ("(" + str(state.cannibalLeft) + "," + str(state.missionaryLeft)  + "," + state.boat + "," + str(state.cannibalRight) + "," +   str(state.missionaryRight) + ")")
 
 
-def main():
+def main_new():
     solution = breadth_first_search()
     print ("Missionaries and Cannibals solution:")
     print ("(cannibalLeft,missionaryLeft,boat,cannibalRight,missionaryRight)")
     print_solution(solution)
 
+    children= successors(State(3,3,'left',0,0))
+    for child in children:
+        print(child.is_goal())
+        print(child.cannibalLeft, child.missionaryLeft,child.boat,child.cannibalRight,child.missionaryRight)
+
 
 # if called from the command line, call main()
-if __name__ == "__main__":
-    main()
-
+#if __name__ == "__main__":
+#   main()
+main_new()
 
 '''OUTPUT
 Missionaries and Cannibals solution:

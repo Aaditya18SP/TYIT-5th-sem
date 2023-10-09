@@ -9,7 +9,7 @@ x = capacity[0]
 y = capacity[1]
 z = capacity[2]
 
-# to mark visited states memory is a dictionarycontaining key value pair.
+# to mark visited states memory is a dictionary containing key value pair.
 memory = {}
 
 # store solution path
@@ -28,6 +28,7 @@ def get_all_states(state):
     if((a,b,c)in memory):
         return False
     memory[(a,b,c)] = 1
+    
     #empty jug a
     if(a>0):
         #empty a into b
