@@ -1,0 +1,22 @@
+using System;
+
+class prac1b{
+
+public static void Main(string[] args){
+
+string sample="The quick brown fox jumps over the dog";
+
+Console.WriteLine("The string is:{0}",sample);
+
+Console.WriteLine("The String Operations are:\n Concat,ToUpper,ToLower,Replace,IndexOf,Remove,PadLeft,PadRight,Trim,TrimStart,TrimEnd,Split,Substring, StartsWith,EndsWith,Insert,Contains,Compare,Equals,Join");
+
+Console.WriteLine("Concatenated String:{0}",sample.Concat(" THIS IS CONCATENATED"));
+
+Console.WriteLine("To upper case:{0}",sample.ToUpper());
+Console.WriteLine("To lower case:{0}",sample.ToLower());
+
+Console.WriteLine("Replacing alphabet 'e' with 'I':{0}", sample.Replace('e','I'));
+
+}
+
+}

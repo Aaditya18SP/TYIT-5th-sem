@@ -1,0 +1,44 @@
+using System;
+public delegate void BrakeEventHandler();
+
+class operations{
+public event BrakeEventHandler onBrake();
+
+private int speed;
+
+public int Speed{
+get{ return speed ;}
+set{speed=value; 
+//event is triggered
+onBrake();
+}
+}
+
+
+public void displayTailLamps(){
+Console.WriteLine("Displaying Tail lamps in red");
+}
+
+public void decelerate(int new_speed){
+Console.WriteLine("decelerating....");
+this.Speed= new_speed;
+//this is done to call the event
+}
+
+}
+
+
+class prac2c{
+
+
+public static void Main(string[] args){
+
+operations obj=new operations();
+
+BrakeEventHandler new_del=obj.displayTailLamps();
+obj.decelerate(20);
+
+}
+
+}
+

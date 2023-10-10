@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<All_Cars>
+  <!--This is a comment-->
+  <Car is_covertible="false">
+    <brand>Porsche</brand>
+    <model>GT3</model>
+  </Car>
+</All_Cars>
