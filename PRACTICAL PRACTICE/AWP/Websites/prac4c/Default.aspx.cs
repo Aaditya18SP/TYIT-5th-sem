@@ -12,10 +12,9 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-    protected void uc1_FormSubmitted(object source, WebUserControl.FormsubmittedEventArgs)
+    protected void submitEventHandler(object sender, WebUserControl.student e)
     {
-        tbInfo.TextMode = System.Web.UI.WebControls.TextBoxMode.MultiLine;
-        tbInfo.Text = "name is:" + e.name + "\nAge is:" + e.age;  
-        //tbInfo.Text = "Info received";
+        lbldisplay.Text = e.name;
+
     }
 }
