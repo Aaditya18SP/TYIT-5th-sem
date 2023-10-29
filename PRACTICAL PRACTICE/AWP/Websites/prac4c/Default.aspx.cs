@@ -12,7 +12,7 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-    protected void submitEventHandler(object sender, WebUserControl.student e)
+    protected void submitEventHandler(object sender,WebUserControl.student e)
     {
         lbldisplay.Text = e.name;
 
