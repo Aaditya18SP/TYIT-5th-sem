@@ -1,0 +1,16 @@
+UNIT 1
+UNIT 4
+
+UNIT 5
+What do you mean by authentication? Explain its types.
+Discuss XML classes.
+Explain authentication with types.
+Write the benefits using Ajax? Explain UpdatePanel and ScriptManager.
+What is XML? List the advantages of XML.
+Discuss the use of XDocument with example.
+Discuss the use of XmlReader class with example.
+Discuss teh use of XmlTextReader example
+Explain different types of authentication mechanism provided by ASP.NET.
+Explain the use of UpdateProgress control in AJAX.
+What is XML? Write the rules used when creating your own XML document.
+What is AJAX? Its Advantages and Disadvantages.

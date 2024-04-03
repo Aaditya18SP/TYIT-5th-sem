@@ -1,0 +1,105 @@
+UNIT 1
+CHP1	- Introduction
+1. Define AI
+2. Discuss Turing Test
+3. Explain cognitive modelling approach
+4. Explain rational agent approach
+
+CHP2
+1) Define the following:-
+a) Agent
+b) Percept
+c) Percept sequence
+d) Agent function
+e) Agent program
+f) Rational agent
+g) Task environment
+
+2) Discuss the components on which rationality depends on
+3) Write PEAS description for
+a) Automated Taxi
+b) Medical Diagnosis
+c) Satellite Image analysis
+d) Part picking robot
+e) Refinery controller
+f) Interactive English tutor
+4) Discuss the following task environment
+a) Fully observable vs partially observable
+b) Single agent vs multi agent
+c) Episodic agent vs sequential agent
+d) Static vs dynamic
+e) Discrete vs continuous
+f) Known vs unknown
+5) Discuss structure of agent
+
+6) Explain working of:-
+a) Simple reflex agent
+b) Model-based reflex agent
+c) Goal based agent
+d) Utility based agent
+e) Learning agent
+7) How components of agent program work
+
+UNIT 2
+CHP3 - Solving problems by searching
+1) List and explain the components used for formal definition of a problem
+2) Formulate the following:-
+a) N-queen
+b) 8 puzzle
+c) Route Finding
+d) Touring problem
+e) Traveling salesman
+f) VLSI
+g) Robot navigation
+h) Automatic assembly sequencing
+i) Vacuum cleaner
+
+3) Discuss the structure of node ‘n’ used in search tree
+4) List and explain ways of evaluating performance of an algorithm
+5) Explain working of:-
+a) BFS
+b) DFS
+c) Uniform cost search
+d) A * search
+e) Greedy Best- first search
+f) Iterative deepening DFS
+g) Depth limited search
+h) Bidirectional search
+i) Recursive Best first search
+
+6) Discuss the conditions for optimality of A*
+7) What are heuristic functions. 
+UNIT 3
+CHP 7- Logical agents
+1) Explain knowledge based agent
+2) PEAS description of Wumpus world
+3) Discuss the connectives used in propositional logic
+4) Discuss BNF grammar of sentences in propositional logic
+5) Semantics in propositional logic
+6) List and explain standard, logical equivalence in propositional logic
+7) Explain Modus Ponus and And-Elimination with example
+8) Explain horn clauses and definite clauses
+UNIT 4
+CHP 8 
+1) Discuss the steps in the knowledge-engineering process.
+2) Explain universal and existential quantifiers with example.
+3) Explain the nested qualifiers.
+4) List and explain the qualifiers used in first order logic.
+CHP 9
+1) Write a short note on simple forward chaining.
+2) Explain the first-order inference rule.
+3) Write a short note on unification.
+4) Explain the First-order definite clauses.
+UNIT 5
+CHP 10- Classical Planning
+1) State the Air Cargo Transportation Planning problem. Write a PDDL description of an air cargo transportation planning problem
+2) State a block world problem. Write a PDDL description of block world problem.
+3) State a spare tire problem. Write a PDDL description for the spare tire problem.
+4) Discuss Heuristics for planning.
+5) What is planning? Explain the need for planning
+6) Write a note on the planning graph.
+CHP 12- Knowledge representation
+1) Explain the concept of Ontological Engineering in short.
+2) Write a short note on events.
+3) Write a short note on objects.
+
